@@ -1,0 +1,46 @@
+/* 
+.form-control::placeholder {
+    color:rgba(189, 195, 199, 1);
+    margin-left: 100px;
+    
+  } */
+  .form-control::placeholder { 
+    color: rgba(189, 195, 199, 1);
+    padding-left: 27px;
+    padding-inline-start: 10px;
+
+    /* Firefox */
+}
+/* .form-control-feedback{
+  padding:  20px;
+  
+} */
+form .upsearch {
+  position: absolute !important;
+  top: 12px !important;
+  left: 10px !important;
+  z-index: 100;
+}
+
+/* option:hover{
+  background-color: #011B53 ;
+} */
+select option:checked, select option:hover{
+  background-color:#011B53 !important ;
+  color: #ffff !important;
+}
+.mrs{
+  margin-left: -20rem;
+}
+@media only screen and (max-width: 1200px) {
+.mrs {
+    margin-left: 0.5rem ;
+    margin-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hid {
+    display: none;
+
+    }
+  }

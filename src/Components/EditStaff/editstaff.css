@@ -1,0 +1,44 @@
+
+form{
+    margin-top: -10px;
+    font-size: 14px;
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: 0.04em;
+
+}
+.selectmulti{
+    z-index: 10;
+}
+
+form label{
+    color: rgba(1, 27, 83, 1);
+    margin-bottom: -7px;
+    font-size: 14px;
+
+
+
+}
+form input{
+
+
+    font-weight: normal;
+    font-size: 14px;
+}
+ option {
+    margin-top: -10px;
+}/* .editclass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.staff-set{
+
+    z-index: 100;
+    background-color: #fff;
+} */

@@ -1,0 +1,39 @@
+#page-content-wrapper {
+    color: #011B53;
+    z-index: 5;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 768px) {
+
+    #page-content-wrapper {
+      margin-left: 228px;
+    }
+  }
+
+.upload-btn {
+    z-index: 9999 !important;
+    border: 0;
+    width: fit-content;
+    padding: 10px 15px;
+    background: #EA4444;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 36px;
+    color: white;
+    right: 50px;
+    top: 72px;
+}
+
+@media only screen and (max-width: 600px) {
+   .upload-btn {
+       border-radius: 100%;
+       padding: 15px;
+       position: fixed;
+       bottom: 50px;
+       top: auto;
+       font-size: 18px;
+   }
+}

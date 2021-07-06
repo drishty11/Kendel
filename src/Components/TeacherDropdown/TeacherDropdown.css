@@ -1,0 +1,53 @@
+.addModal { 
+    width: 155px;
+    height: 100px;
+    
+}     
+
+.addModal-content, .PostModal-content, .threedotModal-content {
+    box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+.modal-btn, .Postmodal-btn, .threedotModal-btn, .StudentModal-btn {
+    text-align: left;
+    font-weight: 600;
+    background: #fff;
+}
+
+.threedotModal-btn:hover, .Postmodal-btn:hover {
+    background: #011B53;
+    color: #fff;
+
+}
+
+
+/* Post */
+.PostModal { 
+    width: 135px;
+    height: 100px;
+    
+}  
+
+/* threedotModal */
+.threedotModal {
+    width: 120px;
+    height: 100px;
+}
+
+
+/* Student List */
+
+.StudentModal {
+    width: 135px;
+    height: 150px;
+    box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
+    padding: 20px 0px;
+    margin-top: 215px !important;
+    border-radius: 10px;
+}
+.StudentModal-content{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}

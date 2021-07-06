@@ -1,0 +1,41 @@
+
+#profile {
+  padding-right: 60px;
+}
+.boxes {
+  border-radius: 8px;
+}
+.profile-head {
+    transform: translateY(5rem);
+}
+
+.profile {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+}
+  
+.cover {
+  background: linear-gradient(170.85deg, #EA4444 -174.82%, rgba(234, 68, 68, 0) 86.95%);
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden
+}
+
+.icon {
+  font-size: 30px;
+}
+.label {
+   
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #E5E5E5;;
+    position: absolute;
+    margin-left: 80px;
+    margin-bottom: 22px;
+}

@@ -1,0 +1,74 @@
+.Studentoverlay { 
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin: 0 auto;
+    width: 100%;
+} 
+
+.Studentoverlay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
+    border-radius: 10px;
+    margin-top: 148px;
+    margin-left: 148px;
+    padding: 20px;
+    background: #fff;
+    color: #011B53;
+}
+
+.Studentoverlay-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.Studentform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    width: 300px;
+
+}
+
+form label, form input {
+    margin-bottom: 15px;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.StudenteditBtn {
+    font-size: 26px;
+    border: none;
+    background: #fff;
+    color: #011B53;
+}
+
+.closeBtn {
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.closeBtn:hover {
+    background: #011B53;
+    color: white;
+} 

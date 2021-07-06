@@ -1,0 +1,19 @@
+ 
+  #classes .class-pic {
+      top: 10px;
+      right: 17px;
+  }
+
+  #classes .imageof {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+  }
+
+  #classes .content-text {
+    color: #A6ABBD;
+
+  }
+  #classes .class-board {
+    border: 0.5px solid #A6ABBD;
+    border-radius: 8px;
+  }

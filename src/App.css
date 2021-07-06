@@ -1,0 +1,161 @@
+:root {
+  --main-bg-color: #fff;
+  --main-text-color: linear-gradient(179.88deg, #011B53 -143.82%, #063DB5 226.52%);
+  --second-text-color: #fff;
+  --second-bg-color: linear-gradient(179.88deg, #011B53 -143.82%, #063DB5 226.52%);
+  --third-text-color: #EA4444;
+  --third-bg-color: rgba(189, 195, 199, 0.2);
+  --other-bg-color: #FDECEC;
+  --other-text-color: #011B53;
+ 
+
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.secondary-text {
+  color: var(--second-text-color);
+}
+
+.third-text {
+  color: #EA4444;
+}
+
+.other-text {
+  color: #011B53;
+}
+
+.primary-bg {
+  background: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background: var(--second-bg-color);
+}
+
+.content-bg {
+  background: var(--third-bg-color);
+}
+
+.other-bg {
+  background: var(--other-bg-color);
+}
+.rounded-full {
+  border-radius: 100%;
+}
+
+.opacity-0 {
+  opacity:0!important;
+}
+.opacity-1 {
+  opacity:0.2!important;
+}
+.opacity-2 {
+  opacity:0.4!important;
+}
+.opacity-3 {
+  opacity:0.6!important;
+}
+.opacity-4 {
+  opacity:.8!important;
+}
+.opacity-5 {
+  opacity:1!important;
+}
+
+/* Maybe even support hover opacity shifts */
+.opacity-0h5 {
+  opacity:0!important;
+  transition: opacity .25s ease-in-out!important;
+  -moz-transition: opacity .25s ease-in-out!important;
+  -webkit-transition: opacity .25s ease-in-out!important;
+}
+.opacity-0h5:hover {
+  opacity:1!important;
+}
+
+.sidebarActive{
+  margin-left:  200px !important;
+  background-color: rgba(0,0,0,0.03);
+}
+
+
+
+.main { 
+  display: block; 
+  position: relative; 
+  padding-left: 25px; 
+  margin-bottom: 15px; 
+  cursor: pointer; 
+} 
+
+
+
+/* Hide the default checkbox */ 
+
+input[type=checkbox] { 
+  visibility: hidden; 
+} 
+
+.geekmark { 
+
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 20px; 
+  width: 20px; 
+  border: 1px solid var(--other-text-color);
+  background-color: #fff; 
+
+} 
+
+.main input:active ~ .geekmark { 
+
+  background-color: #011B53; 
+
+} 
+
+.main input:checked ~ .geekmark { 
+  background-color: #011B53; 
+} 
+
+.geekmark:after { 
+  content: ""; 
+  position: absolute; 
+  display: none; 
+
+} 
+
+.main input:checked ~ .geekmark:after { 
+  display: block; 
+} 
+
+.main .geekmark:after { 
+
+  left: 5px; 
+  bottom: 5px; 
+  width: 8px; 
+  height: 12px; 
+  border: solid white; 
+  border-width: 0 2px 2px 0; 
+  -webkit-transform: rotate(45deg); 
+  -ms-transform: rotate(45deg); 
+  transform: rotate(45deg); 
+
+} 
+
+#page-content-wrapper {
+  color: #011B53;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+
+  #page-content-wrapper {
+    margin-left: 245px;
+  }
+}
+

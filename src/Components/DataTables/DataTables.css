@@ -1,0 +1,41 @@
+#datatable {
+    /* border-collapse: collapse; */
+    /* box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff; */
+    /* border-radius: 10px; */
+    font-size: 0.9rem;
+    overflow-x: scroll;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+ #datatable thead {
+    background: #F7F8F6;
+  }
+
+#datatable thead th,  tbody td  {
+  border-bottom: none;
+}
+  
+  
+#datatable tbody {
+    background: #F7F8F6;
+    text-align: center;
+  }
+  
+ #datatable thead tr {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+#datatable tr {
+    height: 60px;
+  }
+  
+ #datatable tbody {
+    height: 50px;
+  }
+  
+ #datatable thead th, tbody td {
+    padding: 12px 35px;
+    border: none;
+  }
+  

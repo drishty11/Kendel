@@ -1,0 +1,48 @@
+#page-content-wrapper {
+    color: #011B53;
+    z-index: 5;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 768px) {
+
+    #page-content-wrapper {
+      margin-left: 228px;
+    }
+  }
+
+#studentwork table {
+    border-right: 0.5px solid #011B53;
+    border-left: 0.5px solid #011B53;
+    border-top: 0.5px solid #011B53;
+    box-shadow: 0px 2px 20px rgba(54, 87, 151, 0.1);
+    border-radius: 0 0 8px 8px;
+    border-collapse: unset;
+}
+
+#studentwork .StudentChar{
+    font-size: 22px;
+}
+
+#studentwork .work {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+}
+
+#studentwork .student-head {
+    border: 0.5px solid #011B53;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+}
+#studentwork .vertical-line {
+    border-left: 0.5px solid #011B53 ;
+    height: 60px;
+}
+
+#studentwork .studentWork {
+    width: 75%;
+    border-right: 0.5px solid #011B53;
+    padding: 20px;
+}

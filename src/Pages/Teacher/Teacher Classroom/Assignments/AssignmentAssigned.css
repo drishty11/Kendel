@@ -1,0 +1,28 @@
+#page-content-wrapper {
+    color: #011B53;
+    z-index: 5;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: 768px) {
+
+    #page-content-wrapper {
+      margin-left: 228px;
+    }
+  }
+
+
+  .assignment {
+    border: 0.25px solid #011B53;
+    border-radius: 8px;
+  }
+
+  .lining {
+    border-bottom: 0.25px solid #011B53;
+  }
+
+  .underline {
+      border-bottom: 1px solid #011B53 !important;
+      line-height: 1.5;
+  }

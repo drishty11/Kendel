@@ -1,0 +1,31 @@
+.Nav-breadcrumb {
+    height: 70px;
+    width: calc(100% - 210px);
+    background: #E8E8E8;
+    margin-top: 63px;
+   
+}
+
+.link {
+    font-size: 22px;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.crumbName {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .Nav-breadcrumb {
+        height: 80px;
+        width: 100%;
+        margin-top: 78px;
+    }
+    .crumbName {
+        font-size: 18px;
+    }
+}

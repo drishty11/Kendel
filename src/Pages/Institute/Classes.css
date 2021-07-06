@@ -1,0 +1,60 @@
+.stafftable {
+    border-collapse: collapse;
+    box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+.stafftable thead {
+  height: 50px;
+}
+
+.stafftable thead tr {
+  background: #BDC3C7;
+  color: #05060FF2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stafftable tbody {
+  height: 50px;
+}
+
+.stafftable thead th, .stafftable tbody td {
+  padding: 12px 35px;
+}
+#page-content-wrapper {
+  color: #011B53;
+  z-index: 5;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+
+  #page-content-wrapper {
+    margin-left: 245px;
+  }
+}
+
+.class-pic {
+    top: 10px;
+    right: 17px;
+}
+
+.imageof {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.content-text {
+  color: #A6ABBD;
+
+}
+.class-board {
+  border: 0.5px solid #A6ABBD;
+  border-radius: 8px;
+}
