@@ -21,7 +21,7 @@ export default function AssignmentAssigned({ toggleSidebar, sidebarOpen }) {
                 <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                     <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                         <div className="d-flex flex-column justify-content-between align-items-center mb-3 assignment">
-                            <div className="d-flex flex-row w-100 align-items-center p-3 justify-content-between">
+                            <div className="d-flex flex-row w-100 align-items-center p-3 pb-0 justify-content-between">
                                 <div className="w-100 d-flex justify-content-start align-items-start">
                                     <div className="d-flex justify-content-center align-items-center noteIcon mr-4">
                                         <Frame29 />
@@ -29,14 +29,14 @@ export default function AssignmentAssigned({ toggleSidebar, sidebarOpen }) {
                                     <div className="w-100 d-flex flex-column">
                                         <div className="d-flex flex-row justify-content-between align-items-start mb-4">
                                             <div className="d-flex flex-column justify-content-center align-items-start">
-                                                <h3>Electromagnetic Assignment</h3>
+                                                <h5>Electromagnetic Assignment</h5>
                                                 <p className="mb-0">Posted on 1 Mar</p>
                                             </div>
                                             {/* <TeacherDropdown /> */}
                                         </div>
                                         <div className="d-flex flex-row justify-content-between align-items-center">
-                                            <h5>Ungraded  |  Due 16 Mar, 5 Pm</h5>
-                                            <Link to="/classes/classroom/assignments/studentwork" className="underline text-decoration-none other-text">See Student Work</Link>
+                                            <h6>Ungraded  |  Due 16 Mar, 5 Pm</h6>
+                                            <Link to="/classes/classroom/assignments/studentwork" className="underline text-decoration-none other-text font-weight-bold">See Student Work</Link>
                                         </div>
                                     </div>
                                 </div>

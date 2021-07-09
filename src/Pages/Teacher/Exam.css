@@ -1,2 +1,49 @@
+.Nav-breadcrumb {
+    height: 70px;
+    width: calc(100% - 210px);
+    background: #E8E8E8;
+    margin-top: 63px;
+   z-index: 9999 !important;
+}
 
+.link {
+    font-size: 22px;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.crumbName {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .Nav-breadcrumb {
+        height: 80px;
+        width: 100%;
+        margin-top: 78px;
+    }
+    .crumbName {
+        font-size: 16px;
+    }
+}
+
+
+.exam-header {
+    /* width: 100px; */
+    border: 0;
+    border-bottom: 4px solid #ff6584 !important; 
+  }
+.exam-disable {
+    color: rgba(70, 67, 83, 0.6);
+
+}
+
+  .vertical-line {
+    border-left: 2px solid #838383 ;
+    height: 15px;
+    /* width: 3px; */
+}
   

@@ -13,14 +13,14 @@ export default function Navbar({title, toggleSidebar}) {
         <nav className="topNav navbar navbar-expand-md navbar-light justify-content-between flex-nowrap primary-bg py-3 px-4 py-md-2 position-fixed">
         
         <div className="d-flex flex-row align-items-center">
-          <h2 className="h4 m-0 d-none d-md-block">{title}</h2>
+          <h2 className="h5 m-0 d-none d-md-block">{title}</h2>
           <div className="d-md-none d-flex logo">
              <img src={logo} alt="logo" width="150px" />
           </div>
         </div>
 
         <div
-          className="d-flex justify-content-end align-items-center"
+          className="d-flex justify-content-end align-items-center pointer"
           id="collapsibleNavbar"
         >
           <IoNotificationsOutline className="d-flex icon" />

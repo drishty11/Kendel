@@ -103,7 +103,7 @@ export default function Dashboard({ sidebarOpen, toggleSidebar }) {
                 <Classes1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Classes</h5>
+                <h6 className=" other-text">Total Classes</h6>
                 <p className="fs-5 third-text">10</p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Dashboard({ sidebarOpen, toggleSidebar }) {
                 <Students1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Students</h5>
+                <h6 className="other-text">Total Students</h6>
                 <p className="fs-5 third-text">10</p>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Dashboard({ sidebarOpen, toggleSidebar }) {
                 <Exams1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Exams</h5>
+                <h6 className="other-text">Total Exams</h6>
                 <p className="fs-5 third-text">10</p>
               </div>
             </div>

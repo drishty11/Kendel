@@ -1,8 +1,8 @@
-#page-content-wrapper {
+/* #page-content-wrapper {
     color: #011B53;
     z-index: 5;
     overflow-x: hidden;
-  }
+  } */
   
   #profile {
     padding-right: 60px;
@@ -45,9 +45,9 @@
       margin-bottom: 22px;
   }
   
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
   
     #page-content-wrapper {
       margin-left: 245px;
     }
-  }
+  } */

@@ -37,13 +37,13 @@ export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
             <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
             <BreadCrumbs crumbs={breadcrumbPath} />
             <div id="studymaterial" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
-                <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
-                    <form className="w-100 form pt-5 pb-2 px-4 mb-5 mt-5">
+                <div className="pt-5 px-lg-4 mt-5 d-flex flex-column mb-4">
+                    <form className="w-100 form pt-4 pb-2 px-4 my-4">
                         <div className="mb-5">
-                            <textarea name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-2 text-area mb-2 mb-md-4" 
+                            <textarea name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area mb-2 mb-md-4" 
                             rows="2" />
-                            <textarea name="content" placeholder="Description" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-2 text-area text-area-1 mb-2 mb-md-4" 
-                            rows="3" />
+                            <textarea name="content" placeholder="Description" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area text-area-1 mb-2 mb-md-4" 
+                            rows="4" />
                             
                         </div>
                         <div className="d-flex flex-column justify-content-between btn-section flex-lg-row ">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BiFace, TiAttachmentOutline, MdSend} from 'react-icons/all';
+import { Send } from '../../images/Icons/icons'
 import { Cross1, Doubt, Doubt1 } from '../../images/Icons/icons';
 import "./ChatPopup.css";
 
@@ -42,18 +43,18 @@ function StudentDoubt({ text, setText, doubtType }) {
     
       <div>
         {doubtType === "Solved" ? (
-          <h6 className="third-text other-bg p-4">
+          <h6 className="third-text text-center other-bg p-4">
             Doubt is solved & Thread is closed
           </h6>
         ) : (
           <div className="chat-input d-flex justify-content-between align-items-center p-2 my-3 mx-auto">
-            <div className="d-flex justify-content-evenly align-items-center">
-              <BiFace size={26} className="mr-1" />
+            <div className="d-flex justify-content-evenly align-items-center pointer">
+              <BiFace size={26} className="mr-1 cursor-pointer" />
               <input placeholder="Type something...." className="border-0" style={{ outline: 'none'}} /> 
             </div>
-            <div className="d-flex">
-              <TiAttachmentOutline size={26} />
-              <MdSend size={26} className="ml-1 pr-1" />
+            <div className="d-flex align-items-center pointer">
+              <TiAttachmentOutline size={26}  />
+              <Send />
             </div>
           </div>
         )}
@@ -64,7 +65,7 @@ function StudentDoubt({ text, setText, doubtType }) {
 export default function ChatBoxbutton() {
   const [chatopen, setChatopen] = useState(false);
   return (
-    <div className="position-absolute chatButton">
+    <div className="position-fixed chatButton">
       {chatopen ? (
         <SolvedTab chatopen={chatopen} setChatopen={setChatopen} />
       ) : (
@@ -181,10 +182,10 @@ function SolvedTab({ chatopen, setChatopen }) {
                 return (
                   <div
                     key={index}
-                    className="d-flex align-items-center mb-2 px-3 py-3 Solvedmain"
+                    className="d-flex align-items-center mb-2 px-3 py-3 Solvedmain pointer"
                     onClick={() => setText(!text)}
                   >
-                    <div className="d-flex justify-content-center align-items-center ChatIcon ">
+                    <div className="d-flex justify-content-center align-items-center ChatIcon">
                       <Doubt1 />
                     </div>
                     <div className="d-flex flex-column justify-content-start align-items-start ml-3">

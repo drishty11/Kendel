@@ -1,0 +1,63 @@
+.login {
+    width: 55%;
+    height: 400px;
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    padding-top: 170px;
+}
+
+.input-form{
+    height: 45px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid #011B53;
+}
+section {
+    width: 375px;
+}
+.eyeIcon {
+    right: 5%;
+    bottom: 32%;
+}
+
+.fpass{
+    font-size: 16px;
+}
+.login-btn{
+    height: 55px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .login {
+        width: 85%;
+        left: 8%;
+    }
+    .copy-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 768px) and (min-width: 500px) {
+    section {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 320px) {
+    .login {
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+    }
+}
+@media (max-width: 320px) {
+    section {
+        width: 300px;
+    }
+}

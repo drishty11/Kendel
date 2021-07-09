@@ -6,8 +6,8 @@ import  images  from "../../images/userimg.jpg";
 import  logo  from '../../images/logof.png'
 import "./Sidebar.css";
 
-export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
-  const [activeMenuItem, setActiveMenuItem] = useState(0);
+export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMenuItem }) {
+  // const [activeMenuItem, setActiveMenuItem] = useState(0);
   return (
     <div
       className={`${
@@ -29,29 +29,26 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
         <div className="list-group list-group-flush my-3">
           <Link
             to="/"
-            onClick={() => setActiveMenuItem(0)}
             className={`${
-              activeMenuItem === 0 && "active text-decoration-none"
+              activeMenuItem === 'profile' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex text-white secondary-text align-items-center`}
           >
             <ProfileUser /> Profile
           </Link>
           <Link
             to="/dashboard"
-            onClick={() => setActiveMenuItem(1)}
             className={`${
-              activeMenuItem === 1 && "active text-decoration-none"
+              activeMenuItem === 'dashboard' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white secondary-text`}
           >
             <DashboardAll />  Dashboard
           </Link>
           <hr className="opacity-3 bg-white py-0.25 border-0" />
-          <p class="text-uppercase px-4 py-2 p6 mb-0 text-white">Main</p>
+          <p class="text-uppercase px-4 py-1 mb-0 text-white" style={{ fontSize: '12px' }}>Main</p>
           <Link
             to="/classes"
-            onClick={() => setActiveMenuItem(2)}
             className={`${
-              activeMenuItem === 2 && "active text-decoration-none"
+              activeMenuItem === 'classes' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <ClassesAll />  Classes
@@ -59,9 +56,8 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
           {category === 'institute' ? 
           <Link
             to="/staff"
-            onClick={() => setActiveMenuItem(3)}
             className={`${
-              activeMenuItem === 3 && "active text-decoration-none"
+              activeMenuItem === 'staff' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <RiGroupLine className="me-2 mr-3 navicon" /> Staff
@@ -70,9 +66,8 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
           {category === 'institute' ? 
           <Link
             to="/student"
-            onClick={() => setActiveMenuItem(4)}
             className={`${
-              activeMenuItem === 4 && "active text-decoration-none"
+              activeMenuItem === 'student' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <StudentsAll />  Student
@@ -80,9 +75,8 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
           }
           <Link
             to="/exam"
-            onClick={() => setActiveMenuItem(5)}
             className={`${
-              activeMenuItem === 5 && "active text-decoration-none"
+              activeMenuItem === 'exam' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <ExamsAll />  Exam
@@ -90,40 +84,37 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category }) {
           {category === 'institute' ? 
           <Link
             to="/attendance"
-            onClick={() => setActiveMenuItem(6)}
             className={`${
-              activeMenuItem === 6 && "active text-decoration-none"
+              activeMenuItem === 'attendance' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <IoCheckboxOutline className="me-2 mr-3 navicon" />
             <div class="dropdown">
-              <button className="btn " style={{boxShadow:"none", color:"#fff"}} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="btn p-0 m-0" style={{boxShadow:"none", color:"#fff", fontSize:"14px"}} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Attendance
               </button>
-              <div className="dropdown-menu p-1 mr-sm-5"  aria-labelledby="dropdownMenuButton">
-                <Link to= "/teacherattendance" onClick={()=>setActiveMenuItem(9)} className="dropdown-item" type="button" href="#" >Staff Attendance</Link>
-                <Link to= "/studentattendance" onClick={()=>setActiveMenuItem(10)} className="dropdown-item" type="button" href="#" >Student Attendance</Link>
+              <div className="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                <Link to= "/teacherattendance" className="dropdown-item" type="button" href="#" >Staff Attendance</Link>
+                <Link to= "/studentattendance"  className="dropdown-item" type="button" href="#" >Student Attendance</Link>
               
               </div>
             </div>
           </Link> : ''
           }
          <hr className="opacity-5 bg-white py-0.25 border-0" /> 
-          <p class="text-uppercase px-4 p6 py-2 mb-0 text-white">Others</p>
+          <p class="text-uppercase px-4 py-1 mb-0 text-white" style={{ fontSize: '12px' }}>Others</p>
           <Link
             to="/settings"
-            onClick={() => setActiveMenuItem(7)}
             className={`${
-              activeMenuItem === 7 && "active text-decoration-none"
+              activeMenuItem === 'settings' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <SettingsAll />  Settings
           </Link>
           <Link
             to="/logout"
-            onClick={() => setActiveMenuItem(8)}
             className={`${
-              activeMenuItem === 8 && "active text-decoration-none"
+              activeMenuItem === 'logout' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
             <LogoutAll />  Logout

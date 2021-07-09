@@ -6,12 +6,12 @@
   border-radius: 8px;
 }
 .profile-head {
-    transform: translateY(5rem);
+    transform: translateY(4.5rem);
 }
 
 .profile {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
 }
   
@@ -27,15 +27,16 @@ body {
 }
 
 .icon {
-  font-size: 30px;
+  /* font-size: 30px; */
 }
+
 .label {
    
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     border-radius: 100%;
     background: #E5E5E5;;
     position: absolute;
-    margin-left: 80px;
-    margin-bottom: 22px;
+    margin-left: 60px;
+    margin-bottom: 20px;
 }

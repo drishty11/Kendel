@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+// import Picker from './Components/Options/Picker/Picker';
+// import Verification from './Components/Options/Verification/Verification';
+// import Login from './Components/Login/Login';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { Profile1,Dashboard1,Classes1,Teacherattendance,Studentattendance,Exam1,Staff,Student } from './Pages/Institute';
 import { Profile, Dashboard, Classes, Exam, Attendance } from './Pages/Teacher';
@@ -31,89 +34,99 @@ function App() {
      <Footer />
      {option === 'Teacher' ? 
       <>
+      {/* <Login /> */}
+      {/* <Verification /> */}
+      {/* <Picker /> */}
         <Route path="/" exact="true" >
-        <Sidebar sidebarOpen={sidebarOpen} />
-        <Profile sidebarOpen={sidebarOpen}  toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'profile'} />
+          <Profile sidebarOpen={sidebarOpen}  toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/dashboard" exact="true">
-        <Sidebar sidebarOpen={sidebarOpen} />
-        <Dashboard sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'dashboard'} />
+          <Dashboard sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes/classroom" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'classroom'} />
           <Classroom sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes" exact="true">
-        <Sidebar sidebarOpen={sidebarOpen} />
-        <Classes sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'classes'} />
+          <Classes sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam" exact="true">
-        <Sidebar sidebarOpen={sidebarOpen} />
-        <Exam sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+          <Exam sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
 
         <Route path="/classes/classroom/studymaterial/uploadmaterial" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'studyMaterial'} />
           <UploadMaterial sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes/classroom/studymaterial" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'studyMaterial'} />
           <StudyMaterial sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes/classroom/studymaterial/assignmentname" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'studyMaterial'} />
           <Assignment sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         
         <Route path="/classes/classroom/assignments" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'assignment'} />
            <AllAssignments sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes/classroom/assignments/assignmentname" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'assignment'} />
           <AssignmentAssigned sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes/classroom/assignments/assign" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'assignment'} />
           <AssignmentCreate sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} /> 
         </Route>
         <Route path="/classes/classroom/assignments/studentwork" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'assignment'} />
           <StudentWork sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
 
         <Route path="/classes/classroom/people/attendancerecord" exact="true">
-          <TeacherSidebar sidebarOpen={sidebarOpen} />
+          <TeacherSidebar sidebarOpen={sidebarOpen} activeMenuItem={'attendance'} />
           <Attendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route> 
         </> : ''
 }
       {option === 'Institute' ? 
       <>
-       <Sidebar sidebarOpen={sidebarOpen} category='institute' />
+        <Route path="/profile">
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'profile'} />
+          <Profile1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+        </Route>
         <Route path="/dashboard" >
-        <Dashboard1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'dashboard'} />
+          <Dashboard1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/student" >
-        <Student sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'student'} />
+          <Student sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/classes">
-        <Classes1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'classes'} />
+          <Classes1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam">
-        <Exam1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'exam'} />
+          <Exam1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/staff">
-        <Staff sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'staff'} />
+          <Staff sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/teacherattendance">
-        <Teacherattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'teacherattendance'} />
+          <Teacherattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/studentattendance">
-        <Studentattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-        </Route>
-        <Route path="/profile">
-        <Profile1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'studentattendance'} />
+          <Studentattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         </> : ''
       }

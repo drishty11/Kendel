@@ -22,7 +22,7 @@
   }
   
   #sidebar-wrapper .list-group {
-    width: 230px;
+    width: 240px;
   }
   
   #wrapper.toggled #sidebar-wrapper {
@@ -34,7 +34,8 @@
   }
   
   .sidebar {
-    padding: 20px 30px;
+    padding: 14px 32px;
+    font-size: 12px;
   }
   
   .active {
@@ -43,13 +44,14 @@
     padding-left: 25px;
   }
   .navicon {
-    font-size: 22px;
+    /* font-size: 16px; */
   }
 
   .sidebarBtn {
-      height: 45px;
+      height: 40px;
       border-radius: 20px;
       background: #011B53;
+      font-size: 16px;
   }
   
   @media only screen and (max-width: 600px) {

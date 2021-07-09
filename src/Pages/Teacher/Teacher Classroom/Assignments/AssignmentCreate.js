@@ -38,13 +38,13 @@ export default function AssignmentCreate({ toggleSidebar, sidebarOpen }) {
         <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
         <BreadCrumbs crumbs={breadcrumbPath} />
             <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
-                <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
-                <form className="w-100 form pt-5 pb-2 px-4 mb-5">
+                <div className="pt-3 px-lg-4 mt-5 d-flex flex-column mb-4">
+                <form className="w-100 form pt-4 pb-2 px-4 mb-4">
                         <div className="mb-5">
-                            <textarea name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-2 text-area mb-2 mb-md-4" 
+                            <textarea name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area mb-2 mb-md-4" 
                             rows="2" />
-                            <textarea name="content" placeholder="Description" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-2 text-area text-area-1 mb-2 mb-md-4" 
-                            rows="3" />
+                            <textarea name="content" placeholder="Description" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area text-area-1 mb-2 mb-md-4" 
+                            rows="4" />
                             
                         </div>
                         <div className="d-flex flex-column justify-content-between btn-section flex-lg-row ">
@@ -53,12 +53,12 @@ export default function AssignmentCreate({ toggleSidebar, sidebarOpen }) {
                                 <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '100px', height: '40px'}} onClick={(e) => setActive('Add')}><Add /> Add</button>
                                 {active === 'Add' ? <DropdownAdd ref={Dropdownref} /> : '' } 
                                 <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '130px', height: '40px'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' } </button>
-                               <div className="d-flex flex-column mb-4" style={{ width: '100px', height: '30px'}}>
-                                   <h5 className="points">Points</h5>
+                               <div className="d-flex flex-column mb-2" style={{ width: '100px', height: '30px'}}>
+                                   <h6 className="points">Points</h6>
                                    <input type="number" className="dropdownbtn bg-white p-1 other-text" />
                                </div>
-                               <div className="d-flex flex-column bg-white mb-4">
-                                   <h5>Due</h5>
+                               <div className="d-flex flex-column bg-white mb-2">
+                                   <h6>Due</h6>
                                    <div className="d-flex flex-row">
                                         <button className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3 p-2">Due Date & Time <DownArrow  /></button>          
                                    </div>

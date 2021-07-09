@@ -43,23 +43,25 @@ export default function AllAssignments({ toggleSidebar, sidebarOpen }) {
         <div id="page-content-wrapper">
         <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
         <BreadCrumbs crumbs={breadcrumbPath} />
-        <Link to="/classes/classroom/assignments/assign" className="position-absolute upload-btn d-flex align-items-center text-white text-decoration-none"><Addition height="18px" width="18px" /><span className="d-none d-md-block ml-2">Assign Assignment</span></Link>
+        <Link to="/classes/classroom/assignments/assign" className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none"><Addition height="18px" width="18px" /><span className="d-none d-md-block ml-2">Assign Assignment</span></Link>
             <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                     {Assignments.map((assignment,index) => {
                         return (
                             <div key={index} className="d-flex justify-content-between align-items-center p-3 notes text-decoration-none other-text bg-white cursor-pointer mb-4">
                                 <div className="d-flex flex-row w-100 align-items-center justify-content-between">
-                                    <div className="d-flex flex-row justify-content-between align-items-start">
+                                    <div className="d-flex flex-row justify-content-between align-items-center">
                                         <div className="d-flex justify-content-center align-items-center noteIcon mr-4">
                                             <Frame29 />
                                          </div>
                                         <Link to="/classes/classroom/assignments/assignmentname" className="d-flex flex-column justify-content-center align-items-start text-decoration-none other-text">
-                                            <h5>{assignment.name}</h5>
+                                            <h6>{assignment.name}</h6>
                                             <p className="mb-0">Posted on {assignment.date}</p>
                                         </Link>
                                     </div>
-                                    {/* <TeacherDropdown />   */}
+                                    <div className="position-relative">
+                                        <TeacherDropdown />  
+                                    </div>
                                 </div>
                             </div>
                         )

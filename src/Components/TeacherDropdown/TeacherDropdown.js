@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, forwardRef} from 'react';
 import './TeacherDropdown.css';
-import { Upload, LinkImg  } from '../../images/Icons/icons';
+import { Upload, LinkImg, ThreeDot  } from '../../images/Icons/icons';
 
 
 const DropdownAdd = React.forwardRef((props,ref) => {  
@@ -72,15 +72,117 @@ const StudentDropdown = React.forwardRef((props,ref) => {
         </div>
     )
 })
-const TeacherDropdown = React.forwardRef((props,ref) => {
+const SharedDropdown = () => {
+    const [shared, setShared]= useState(false);
+
+    const Sharedref = useRef(null);
+
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+         
+          if (shared && Sharedref.current && !Sharedref.current.contains(e.target)) {
+            setShared(false)
+          }
+        }
+    
+        document.addEventListener("mousedown", checkIfClickedOutside)
+    
+        return () => {
+          document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+      }, [shared])
     return (
-        <div id="threedotModal" className="threedotModal d-flex flex-column  position-absolute bg-white border-0 my-4" ref={ref} >
+        <>
+        <button className="border-0 outline-0 bg-transparent" onClick={() => setShared(true)}>
+            <ThreeDot />                                  
+        </button>
+        {shared ? 
+        <div id="SharedModal" className="SharedModal d-flex flex-column  position-absolute bg-white border-0 my-2" ref={Sharedref} >
+                <div className="SharedModal-content border-0 d-flex flex-column">
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Preview</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Download</button>
+                </div>
+        </div>
+       
+        : ""}
+        </>
+    )
+}
+const DraftedDropdown = () => {
+    const [drafted, setDrafted]= useState(false);
+
+    const Draftedref = useRef(null);
+
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+         
+          if (drafted && Draftedref.current && !Draftedref.current.contains(e.target)) {
+            setDrafted(false)
+          }
+        }
+    
+        document.addEventListener("mousedown", checkIfClickedOutside)
+    
+        return () => {
+          document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+      }, [drafted])
+    return (
+        <>
+        <button className="border-0 outline-0 bg-transparent" onClick={() => setDrafted(true)}>
+            <ThreeDot />                                  
+        </button>
+        {drafted ? 
+        <div id="SharedModal" className="SharedModal d-flex flex-column  position-absolute bg-white border-0 my-2" ref={Draftedref} >
+                <div className="SharedModal-content border-0 d-flex flex-column">
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Edit</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Share</button>
+                </div>
+        </div>
+       
+        : ""}
+        </>
+    )
+}
+const TeacherDropdown = () => {
+    const [active,setActive]= useState(false);
+
+    const Dropdownref = useRef(null);
+
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+         
+          if (active && Dropdownref.current && !Dropdownref.current.contains(e.target)) {
+            setActive(false)
+          }
+        }
+    
+        document.addEventListener("mousedown", checkIfClickedOutside)
+    
+        return () => {
+          document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+      }, [active])
+    return (
+        <>
+        <button className="border-0 outline-0 bg-transparent" onClick={() => setActive(true)}>
+            <ThreeDot />                                  
+        </button>
+        {active ? 
+        <div className="threedotModal d-flex flex-column position-absolute bg-white border-0 mb-4" ref={Dropdownref} >
                 <div className="threedotModal-content border-0 d-flex flex-column">
                     <button type="button" className="threedotModal-btn px-3 text-align-left w-100 border-0 other-text">Edit</button>
                     <button type="button" className="threedotModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
                 </div>
         </div>
+        : ""}
+        </>
     )
-})
+}
 
-export { DropdownAdd, PostDropdown, StudentDropdown, TeacherDropdown }
+export { DropdownAdd, PostDropdown,StudentDropdown, SharedDropdown, DraftedDropdown, TeacherDropdown }

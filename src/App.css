@@ -7,8 +7,6 @@
   --third-bg-color: rgba(189, 195, 199, 0.2);
   --other-bg-color: #FDECEC;
   --other-text-color: #011B53;
- 
-
 }
 
 .primary-text {
@@ -86,12 +84,10 @@
 .main { 
   display: block; 
   position: relative; 
-  padding-left: 25px; 
+  padding-left: 22px; 
   margin-bottom: 15px; 
   cursor: pointer; 
 } 
-
-
 
 /* Hide the default checkbox */ 
 
@@ -100,15 +96,13 @@ input[type=checkbox] {
 } 
 
 .geekmark { 
-
   position: absolute; 
-  top: 0; 
+  top: 0px; 
   left: 0; 
-  height: 20px; 
-  width: 20px; 
+  height: 15px; 
+  width: 15px; 
   border: 1px solid var(--other-text-color);
   background-color: #fff; 
-
 } 
 
 .main input:active ~ .geekmark { 
@@ -134,8 +128,8 @@ input[type=checkbox] {
 
 .main .geekmark:after { 
 
-  left: 5px; 
-  bottom: 5px; 
+  left: 4px; 
+  bottom: 3px; 
   width: 8px; 
   height: 12px; 
   border: solid white; 
@@ -155,7 +149,15 @@ input[type=checkbox] {
 @media (min-width: 768px) {
 
   #page-content-wrapper {
-    margin-left: 245px;
+    margin-left: 240px;
   }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
 }
 

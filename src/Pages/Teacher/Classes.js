@@ -15,11 +15,11 @@ const Classes = ({ sidebarOpen, toggleSidebar }) => {
                 <div className="class-board d-flex flex-column justify-content-around mb-3 bg-white">
                   <div className="">
                     <img src={images1} alt="classes" className="imageof w-100 mb-3" height="120" />
-                    <div className="class-pic position-absolute"><ThreeDot /></div>
+                    <div className="class-pic position-absolute pointer"><ThreeDot /></div>
                   </div>
                   <Link to="/classes/classroom" className="text-decoration-none">
                       <div className="w-100 px-4 pb-2 ">
-                        <h5>Class Name</h5>
+                        <h6 className="other-text">Class Name</h6>
                         <small className="content-text d-flex mb-2">Subject</small>
                         <small className="content-text d-flex mb-2">40 Students</small>
                       </div>
@@ -31,11 +31,11 @@ const Classes = ({ sidebarOpen, toggleSidebar }) => {
               <div className="class-board d-flex flex-column justify-content-around mb-3 bg-white">
                   <div className="">
                     <img src={images1} alt="classes" className="imageof w-100 mb-3" height="120" />
-                    <div className="class-pic position-absolute"><ThreeDot className="class-pic position-absolute" /></div>
+                    <div className="class-pic position-absolute pointer"><ThreeDot className="class-pic position-absolute" /></div>
                   </div>
                   <Link to="/classes/classroom" className="text-decoration-none">
                       <div className="w-100 px-4 pb-2">
-                        <h5>Class Name</h5>
+                        <h6 className="other-text">Class Name</h6>
                         <small className="content-text d-flex mb-2">Subject</small>
                         <small className="content-text d-flex mb-2">40 Students</small>
                       </div>
@@ -46,11 +46,11 @@ const Classes = ({ sidebarOpen, toggleSidebar }) => {
               <div className="class-board d-flex flex-column justify-content-around mb-3 bg-white">
                   <div className="">
                     <img src={images1} alt="classes" className="imageof w-100 mb-3" height="120" />
-                    <div className="class-pic position-absolute"><ThreeDot className="class-pic position-absolute" /></div>
+                    <div className="class-pic position-absolute pointer"><ThreeDot className="class-pic position-absolute" /></div>
                   </div>
                   <Link to="/classes/classroom" className="text-decoration-none">
                       <div className="w-100 px-4 pb-2">
-                        <h5>Class Name</h5>
+                        <h6 className="other-text">Class Name</h6>
                         <small className="content-text d-flex mb-2">Subject</small>
                         <small className="content-text d-flex mb-2">40 Students</small>
                       </div>
@@ -61,11 +61,11 @@ const Classes = ({ sidebarOpen, toggleSidebar }) => {
               <div className="class-board d-flex flex-column justify-content-around mb-3 bg-white">
                   <div className="">
                     <img src={images1} alt="classes" className="imageof w-100 mb-3" height="120" />
-                    <div className="class-pic position-absolute"><ThreeDot className="class-pic position-absolute" /></div>
+                    <div className="class-pic position-absolute pointer"><ThreeDot className="class-pic position-absolute" /></div>
                   </div>
                   <Link to="/classes/classroom" className="text-decoration-none">
                       <div className="w-100 px-4 pb-2">
-                        <h5>Class Name</h5>
+                        <h6 className="other-text">Class Name</h6>
                         <small className="content-text d-flex mb-2">Subject</small>
                         <small className="content-text d-flex mb-2">40 Students</small>
                       </div>

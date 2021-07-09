@@ -144,11 +144,11 @@ display: none;
   }
 
 } */
-#page-content-wrapper {
+/* #page-content-wrapper {
   color: #011B53;
   z-index: 5;
   overflow-x: hidden;
-}
+} */
 
 .intro {
   background: #EA44441A;
@@ -158,13 +158,13 @@ display: none;
 .content-bg {
   /* background: rgba(189, 195, 199, 0.2); */
 }
-
+/* 
 @media (min-width: 768px) {
   
     #page-content-wrapper {
       margin-left: 245px;
     }
-}
+} */
 
 .button-section {
   width: 100%;

@@ -1,4 +1,4 @@
-#page-content-wrapper {
+/* #page-content-wrapper {
     color: #011B53;
     z-index: 5;
     height: 100vh;
@@ -10,7 +10,7 @@
     #page-content-wrapper {
       margin-left: 228px;
     }
-  }
+  } */
 
 #studentwork table {
     border-right: 0.5px solid #011B53;
@@ -22,7 +22,7 @@
 }
 
 #studentwork .StudentChar{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #studentwork .work {
@@ -45,4 +45,8 @@
     width: 75%;
     border-right: 0.5px solid #011B53;
     padding: 20px;
+}
+
+.missing {
+    color: #EA4444;
 }

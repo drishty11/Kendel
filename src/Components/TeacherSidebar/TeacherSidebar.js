@@ -5,8 +5,8 @@ import { Frame26, Frame27, Frame28, StudentsAll } from '../../images/Icons/icons
 import './TeacherSidebar.css';
 import { LeftArrow1 } from '../../images/Icons/icons';
 
-export default function TeacherSidebar({ sidebarOpen, closeSidebar, category }) {
-    const [activeMenuItem, setActiveMenuItem] = useState(0);
+export default function TeacherSidebar({ sidebarOpen, closeSidebar, category, activeMenuItem }) {
+    // const [activeMenuItem, setActiveMenuItem] = useState(0);
     return (
         <div className={`${sidebarOpen ? "sidebar_active" : "close_sidebar"} d-flex flex-row`} id="wrapper">
             <div className="secondary-bg" id="sidebar-wrapper">
@@ -21,36 +21,36 @@ export default function TeacherSidebar({ sidebarOpen, closeSidebar, category }) 
                         <hr className="opacity-3 bg-white py-0.25 border-0" />
                         <Link
                           to="/livelecture"
-                          onClick={() => setActiveMenuItem(0)}
+                       
                           className={`${
-                            activeMenuItem === 0 && "active text-decoration-none"
+                            activeMenuItem === 'classroom' && "active text-decoration-none"
                           } sidebar text-decoration-none d-flex text-white secondary-text align-items-center`}
                         >
                           <Frame26 /> Join Live Lecture
                         </Link>
                         <Link
                           to="/joinlink"
-                          onClick={() => setActiveMenuItem(1)}
+                       
                           className={`${
-                            activeMenuItem === 1 && "active text-decoration-none"
+                            activeMenuItem === 'update' && "active text-decoration-none"
                           } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white secondary-text`}
                         >
                           <Frame27 />  Update Join Link
                         </Link>
                         <Link
                           to="/classes/classroom/studymaterial"
-                          onClick={() => setActiveMenuItem(2)}
+                         
                           className={`${
-                            activeMenuItem === 2 && "active text-decoration-none"
+                            activeMenuItem === 'studyMaterial' && "active text-decoration-none"
                           } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
                         >
                           <Frame28 />  Study Material
                         </Link>
                         <Link
                           to="/classes/classroom/assignments"
-                          onClick={() => setActiveMenuItem(3)}
+                         
                           className={`${
-                            activeMenuItem === 3 && "active text-decoration-none"
+                            activeMenuItem === 'assignment' && "active text-decoration-none"
                           } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
                         >
                           <Frame28 className="me-2 mr-3 navicon" /> Assignments
@@ -59,9 +59,9 @@ export default function TeacherSidebar({ sidebarOpen, closeSidebar, category }) 
                         <hr className="opacity-3 bg-white py-0.25 border-0" />
                         <Link
                           to="/classes/classroom/people/attendancerecord"
-                          onClick={() => setActiveMenuItem(5)}
+                        
                           className={`${
-                            activeMenuItem === 5 && "active text-decoration-none"
+                            activeMenuItem === 'attendance' && "active text-decoration-none"
                           } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
                         >
                           <StudentsAll />  Students Attendance

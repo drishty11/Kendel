@@ -22,7 +22,7 @@
 }
 
 #sidebar-wrapper .list-group {
-  width: 15rem;
+  width: 240px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -33,10 +33,10 @@
   cursor: pointer;
 }
 
-.sidebar {
-  padding: 15px 30px;
+ .sidebar {
+  padding: 14px 32px;
+  font-size: 14px;
 }
-
 
 
 .active {

@@ -4,19 +4,19 @@
     
 }     
 
-.addModal-content, .PostModal-content, .threedotModal-content {
+.addModal-content, .PostModal-content, .threedotModal-content, .SharedModal-content {
     box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
     padding: 20px 0px;
     border-radius: 10px;
 }
 
-.modal-btn, .Postmodal-btn, .threedotModal-btn, .StudentModal-btn {
+.modal-btn, .Postmodal-btn, .threedotModal-btn, .StudentModal-btn, .SharedModal-btn {
     text-align: left;
     font-weight: 600;
     background: #fff;
 }
 
-.threedotModal-btn:hover, .Postmodal-btn:hover {
+.threedotModal-btn:hover, .Postmodal-btn:hover, .SharedModal-btn:hover {
     background: #011B53;
     color: #fff;
 
@@ -31,16 +31,19 @@
 }  
 
 /* threedotModal */
-.threedotModal {
+.threedotModal, .SharedModal {
     width: 120px;
     height: 100px;
+    top: 1rem;
+    right: 2rem;
+    /* right: 7rem; */
+    /* margin-top: 7.5rem !important; */
 }
-
 
 /* Student List */
 
 .StudentModal {
-    width: 135px;
+    width: 145px;
     height: 150px;
     box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
     padding: 20px 0px;
