@@ -7,6 +7,7 @@
   --third-bg-color: rgba(189, 195, 199, 0.2);
   --other-bg-color: #FDECEC;
   --other-text-color: #011B53;
+  --blue-bg-color: #011B53;
 }
 
 .primary-text {
@@ -39,6 +40,9 @@
 
 .other-bg {
   background: var(--other-bg-color);
+}
+.blue-bg {
+  background: var(--blue-bg-color);
 }
 .rounded-full {
   border-radius: 100%;
@@ -78,8 +82,6 @@
   margin-left:  200px !important;
   background-color: rgba(0,0,0,0.03);
 }
-
-
 
 .main { 
   display: block; 

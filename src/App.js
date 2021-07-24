@@ -4,10 +4,10 @@ import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Picker from './Components/Options/Picker/Picker';
 // import Verification from './Components/Options/Verification/Verification';
-// import Login from './Components/Login/Login';
+import Login from './Components/Login/Login';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { Profile1,Dashboard1,Classes1,Teacherattendance,Studentattendance,Exam1,Staff,Student } from './Pages/Institute';
-import { Profile, Dashboard, Classes, Exam, Attendance } from './Pages/Teacher';
+import { Profile, Dashboard, Classes, Exam,CreateExam, Attendance, Settings } from './Pages/Teacher';
 import Footer from './Components/Footer/Footer';
 import TeacherSidebar from './Components/TeacherSidebar/TeacherSidebar';
 import Classroom from './Pages/Teacher/Teacher Classroom/Classroom/Classroom';
@@ -18,6 +18,10 @@ import AllAssignments from './Pages/Teacher/Teacher Classroom/Assignments/AllAss
 import AssignmentCreate from './Pages/Teacher/Teacher Classroom/Assignments/AssignmentCreate';
 import AssignmentAssigned from './Pages/Teacher/Teacher Classroom/Assignments/AssignmentAssigned';
 import StudentWork from './Pages/Teacher/Teacher Classroom/Assignments/StudentWork';
+import NonConducted from './Pages/Teacher/Exams/NonConductedExam/NonConducted';
+import Conducted from './Pages/Teacher/Exams/ConductedExam/Conducted';
+import StudentExamWork from './Pages/Teacher/Exams/StudentExamWork/StudentExamWork';
+import StudentExamDetails from './Pages/Teacher/Exams/StudentExamWork/StudentExamDetails';
 
 function App() {
 
@@ -53,9 +57,35 @@ function App() {
           <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'classes'} />
           <Classes sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
+
+        <Route path="/exam/createxam" exact="true">
+        <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+        <CreateExam />
+        </Route>
+        <Route path="/exam/conducted/studentwork/studentexamdetails" exact="true">
+        <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+        <StudentExamDetails />
+        </Route>
+        <Route path="/exam/conducted/studentwork" exact="true">
+        <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+        <StudentExamWork />
+        </Route>
+        <Route path="/exam/conducted" exact="true">
+        <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+        <Conducted />
+        </Route>
+        <Route path="/exam/nonconducted" exact="true">
+        <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
+        <NonConducted />
+        </Route>
+
         <Route path="/exam" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
           <Exam sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+        </Route>
+        <Route path="/settings" exact="true">
+          <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'settings'} />
+          <Settings sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
 
         <Route path="/classes/classroom/studymaterial/uploadmaterial" exact="true">

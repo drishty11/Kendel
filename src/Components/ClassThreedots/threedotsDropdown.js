@@ -13,9 +13,9 @@ const ThreeDotsdrop=()=>{
     <BsThreeDotsVertical />
   </button>
   <div className="dropdown-menu p-1 mr-sm-5"  aria-labelledby="dropdownMenuButton">
-    <a className="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModalCenter4" href="#" onClick={() => setShow(true)} >Edit Class</a>
-     <a className="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModalCenter5" href="#" onClick={()=>setTime(true)}>Set Lecture Timing</a>
-    <a className="dropdown-item" href="#">Delete Class</a>
+    <a className="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModalCenter4" href="/" onClick={() => setShow(true)} >Edit Class</a>
+    <a className="dropdown-item" type="button" data-toggle="modal" data-target="#exampleModalCenter5" href="/" onClick={()=>setTime(true)}>Set Lecture Timing</a>
+    <a className="dropdown-item" href="/">Delete Class</a>
   </div>
 </div>
 <div>

@@ -16,28 +16,34 @@
     background: #fff;
 }
 
+
 .threedotModal-btn:hover, .Postmodal-btn:hover, .SharedModal-btn:hover {
     background: #011B53;
     color: #fff;
-
 }
 
 
 /* Post */
 .PostModal { 
     width: 135px;
-    height: 100px;
-    
+    height: 100px; 
 }  
 
+
 /* threedotModal */
-.threedotModal, .SharedModal {
+.threedotModal {
     width: 120px;
     height: 100px;
-    top: 1rem;
-    right: 2rem;
+    top: 0rem;
+    right: 1.5rem;
     /* right: 7rem; */
     /* margin-top: 7.5rem !important; */
+}
+.SharedModal {
+    width: 140px;
+    height: 115px;
+    top: 0rem;
+    right: 1.5rem;
 }
 
 /* Student List */

@@ -1,5 +1,5 @@
 
-form{
+#exampleModalCenter1 form{
     margin-top: -10px;
     font-size: 14px;
     font-family: Lato;
@@ -16,15 +16,13 @@ letter-spacing: 0.04em;
     z-index: 10;
 }
 
-form label{
+#exampleModalCenter1 form label{
     color: rgba(1, 27, 83, 1);
     margin-bottom: -7px;
     font-size: 14px;
 
-
-
 }
-form input{
+#exampleModalCenter1 form input{
 
 
     font-weight: normal;

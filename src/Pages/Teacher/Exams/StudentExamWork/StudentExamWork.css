@@ -1,0 +1,29 @@
+#StudentExamWork table {
+    border-right: 0.5px solid #011B53;
+    border-left: 0.5px solid #011B53;
+    border-top: 0.5px solid #011B53;
+    box-shadow: 0px 2px 20px rgba(54, 87, 151, 0.1);
+    border-radius: 8px;
+    border-collapse: unset;
+}
+
+#StudentExamWork .StudentChar{
+    font-size: 18px;
+}
+
+#StudentExamWork .work {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 8px 8px;
+}
+
+
+#StudentExamWork .studentWork {
+    width: 75%;
+    border-right: 0.5px solid #011B53;
+    padding: 20px;
+}
+
+.missing {
+    color: #EA4444;
+}

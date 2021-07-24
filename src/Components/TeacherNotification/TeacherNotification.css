@@ -45,11 +45,11 @@
 
 }
 
-form label, form input {
+#Studentoverlay label,#Studentoverlay input {
     margin-bottom: 15px;
 }
 
-form input {
+#Studentoverlay form input {
     padding: 10px;
     border: 1px solid #000;
     border-radius: 10px;

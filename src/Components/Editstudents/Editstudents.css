@@ -1,11 +1,11 @@
-form{
+#exampleModalCenter9 form{
     margin-top: -2px;
     font-size: 14px;
     font-family: Lato;
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 17px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
 
 /* identical to box height */
 
@@ -18,14 +18,14 @@ letter-spacing: 0.04em;
 .modal-dialog{
     z-index: 1000;
 }
-form label{
+#exampleModalCenter9 form label{
     color: rgba(1, 27, 83, 1);
     margin-bottom: 5px;
     margin-top: 5px;
     font-size: 14px;
 
 }
-form input{
+#exampleModalCenter9 form input{
 
 
     font-weight: normal;

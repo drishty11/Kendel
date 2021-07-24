@@ -1,0 +1,23 @@
+.resultInfo {
+    max-width: 350px;
+    width: 100%;
+    top: 30px;
+    box-shadow: 0px 2px 30px rgba(27, 38, 59, 0.2);
+    border-radius: 8px;
+    z-index: 9999 !important;
+}
+
+
+.chart1 {
+    width: 100px;
+    height: 150px;
+} 
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.details {
+    width: -webkit-fill-available;
+}

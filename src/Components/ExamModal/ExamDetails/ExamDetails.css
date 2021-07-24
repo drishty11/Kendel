@@ -1,0 +1,41 @@
+.examModal{
+    max-width: 325px;
+    width: 100%;
+    top: 30px;
+    box-shadow: 0px 2px 30px rgb(27 38 59 / 20%);
+    border-radius: 8px;
+    z-index: 10000 !important;
+}
+
+/* #examModal hr {
+    border: 0.5px solid #2B3D5E;
+    height: 0.1px;
+} */
+
+#examModal form label, .marking {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+#examModal form input,#examModal form textarea {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 0.25px solid #838383;
+    font-size: 12px;
+}
+#examModal .calender{ 
+    right: 0;
+    top: 8px;
+}
+
+.button-sec .button-div {
+    width: 118px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #011B53;
+  }
+
+
+
+  

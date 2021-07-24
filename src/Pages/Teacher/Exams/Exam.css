@@ -1,9 +1,17 @@
-.Nav-breadcrumb {
+.exam-background {
+    background: rgba(5, 6, 15, 0.2);
+    z-index: 9999 !important;
+    height: 100vh;
+}
+#AllExams{
+    margin-bottom: 100px;
+}
+.Exam-breadcrumb {
     height: 70px;
     width: calc(100% - 210px);
     background: #E8E8E8;
     margin-top: 63px;
-   z-index: 9999 !important;
+    z-index: 9988 !important;
 }
 
 .link {

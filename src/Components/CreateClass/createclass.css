@@ -1,4 +1,4 @@
-Form{
+#exampleModalCenter2 Form{
     margin-top: -10px;
     font-family: Lato;
 font-style: normal;
@@ -13,7 +13,7 @@ color: #011B53;
 
 }
 
-Form Label{
+#exampleModalCenter2 Form Label{
     color: rgba(1, 27, 83, 1);
     margin-bottom: -7px;
     font-size: 14px;
@@ -21,7 +21,7 @@ Form Label{
 
 
 }
-form input{
+#exampleModalCenter2 form input{
 
 
     font-weight: normal;

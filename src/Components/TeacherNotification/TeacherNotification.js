@@ -33,7 +33,7 @@ export default function TeacherNotification(props) {
         //     </div>
         // </div>
       
-        <div className="Studentoverlay-content" onClick={e => e.stopPropagation()}>
+        <div className="Studentoverlay-content" id="Studentoverlay" onClick={e => e.stopPropagation()}>
             <div className="Studentoverlay-header">
                 <h3>Add Students</h3>
                 <button onClick={props.onClose} className="StudenteditBtn"><IoClose /></button>

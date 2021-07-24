@@ -99,11 +99,48 @@ const SharedDropdown = () => {
         </button>
         {shared ? 
         <div id="SharedModal" className="SharedModal d-flex flex-column  position-absolute bg-white border-0 my-2" ref={Sharedref} >
-                <div className="SharedModal-content border-0 d-flex flex-column">
-                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Preview</button>
-                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
-                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Download</button>
-                </div>
+            <div className="SharedModal-content border-0 d-flex flex-column">
+                <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Edit</button>
+                <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
+                <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Download</button>
+            </div>
+        </div>
+       
+        : ""}
+        </>
+    )
+}
+const ConductedDropdown = () => {
+    const [shared, setShared]= useState(false);
+
+    const Sharedref = useRef(null);
+
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+         
+          if (shared && Sharedref.current && !Sharedref.current.contains(e.target)) {
+            setShared(false)
+          }
+        }
+    
+        document.addEventListener("mousedown", checkIfClickedOutside)
+    
+        return () => {
+          document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+      }, [shared])
+    return (
+        <>
+        <button className="border-0 outline-0 bg-transparent" onClick={() => setShared(true)}>
+            <ThreeDot />                                  
+        </button>
+        {shared ? 
+        <div id="SharedModal" className="SharedModal d-flex flex-column  position-absolute bg-white border-0 my-2" ref={Sharedref} >
+            <div className="SharedModal-content border-0 d-flex flex-column">
+                <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Student Work</button>
+                <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Download</button>
+            </div>
         </div>
        
         : ""}
@@ -139,8 +176,9 @@ const DraftedDropdown = () => {
         <div id="SharedModal" className="SharedModal d-flex flex-column  position-absolute bg-white border-0 my-2" ref={Draftedref} >
                 <div className="SharedModal-content border-0 d-flex flex-column">
                     <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Edit</button>
-                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
                     <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Share</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Delete</button>
+                    <button type="button" className="SharedModal-btn px-3 text-align-left w-100 border-0 other-text">Download</button>
                 </div>
         </div>
        
@@ -185,4 +223,4 @@ const TeacherDropdown = () => {
     )
 }
 
-export { DropdownAdd, PostDropdown,StudentDropdown, SharedDropdown, DraftedDropdown, TeacherDropdown }
+export { DropdownAdd, PostDropdown, StudentDropdown, SharedDropdown, ConductedDropdown, DraftedDropdown, TeacherDropdown }

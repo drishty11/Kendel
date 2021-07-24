@@ -1,0 +1,76 @@
+.statistics-btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 20px;
+    background: #063DB5;
+}
+
+.options {
+    height: 45px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.correct {
+    background: #51CC25;
+}
+
+.wrong {
+    background: #FF0000;
+}
+
+
+
+.cross {
+    position: relative;
+    opacity: 1;
+    margin-bottom: -5px;
+  }
+  
+  .cross label {
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+  }
+  
+  .cross input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .cross input[type="checkbox"]:checked + label {
+    background-color: rgba(255,255,255, 1);
+    color: #FF0000;
+  }
+  
+  .cross input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+  .cross input[type="checkbox"]:checked + label:before {
+    opacity: 1;
+  }
+  
+  .cross label:before, .cross label:after {
+    position: absolute;
+    top: 5px;
+    left: 8.5px;
+    content: '';
+    height: 12px;
+    width: 2px;
+    background: #FF0000;
+    opacity: 0;
+  }
+  .cross label:before {
+    transform: rotate(45deg);
+  }
+  .cross label:after {
+    transform: rotate(-45deg);
+  }
+  
+  
+    
