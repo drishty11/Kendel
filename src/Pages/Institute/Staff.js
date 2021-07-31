@@ -69,34 +69,23 @@ export default function Staff({  sidebarOpen, toggleSidebar  }) {
   return (
     <div id="page-content-wrapper" style={{background:' rgba(189, 195, 199, 0.1)'}}>
      <Navbar title={'Staff'} toggleSidebar={toggleSidebar} />
-        <div id="classes" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+        <div id="staff" className={`container-fluid pl-4 pr-4 pr-lg-5 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
         <div className="row g-3 my-2 mt-2">
       
-      <div className="container-fluid body-class d-flex justify-content-between px-4 pt-3 ">
-      <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
-                className=" btn d-block d-sm-inline-block rounded-pill mr-2"
-                style={{fontSize:"13px",backgroundColor:"#EA4444",width:"120px",border:" 1px solid #EA4444", borderRadius :"20px", boxShadow:"0px 8px 20px rgba(27, 38, 59, 0.15)",color:"#fff"}}
-                  type="submit"
-                  onClick={() => setShow(true)}
-
-                  
-                >
-                   <IoIosAdd  className="mr-2 font-weight-bold text-white"/>
-                  Add Teacher
-                </button>
-        {/* <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
-        style={{fontSize:"0.9rem",backgroundColor:"#EA4444", boxShadow:"0px 8px 20px rgba(27, 38, 59, 0.15)"}}
-          className="mb-1 btn text-white rounded-pill "
-          onClick={() => setShow(true)}
-        >
-          <IoIosAdd />
-          Add Teacher
-         
-        </button> */}
+        <div className="container-fluid body-class d-flex justify-content-between all-header-btn pt-2" style={{margin: '30px 0 15px 0'}}>
+        <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
+          className=" btn text-white classes-btn rounded-pill d-flex justify-content-center align-items-center"
+          style={{fontSize:"13px",backgroundColor:"#EA4444",width:"120px",height: '45px',border:" 1px solid #EA4444", borderRadius :"20px", boxShadow:"0px 8px 20px rgba(27, 38, 59, 0.15)",color:"#fff"}}
+          type="submit"
+          onClick={() => setShow(true)} >
+          <IoIosAdd size={20}  className="font-weight-bold text-white"/>
+            Add Teacher
+        </button>
         <TeacherNotification className="d-flex justify-content-center align-content-center" onClose={() => setShow(false)} show={show} />
-        <div className="d-flex  justify-content-center">
-          <button type="button" data-toggle="modal" data-target="#exampleModalCenter3 "
-            className="mb-1 btn float-right  rounded-pill"
+
+        <div className="d-flex justify-content-md-center staffdroping-down">
+          <button type="button" data-toggle="modal"   data-backdrop="false"   data-target="#exampleModalCenter3"
+            className="ml-md-3 mr-2 btn classes-btn1 rounded-pill"
             onClick={() => setFilter(true)}
             style={{background:' #FFFFFF', boxShadow:' 0px 8px 20px rgba(43, 61, 94, 0.05)',color:' #011B53'}}
           >
@@ -108,33 +97,36 @@ export default function Staff({  sidebarOpen, toggleSidebar  }) {
             onClose={() => setFilter(false)}
             filter={filter}
           />
+          
 
           <div className="dropdown ">
             <button
-              className="ml-3 mb-1 btn  rounded-pill"
+              className="ml-md-3 btn classes-btn1 rounded-pill"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              style={{background:' #FFFFFF', boxShadow:' 0px 8px 20px rgba(43, 61, 94, 0.05)',color:' #011B53'}}
+              style={{background:' #FFFFFF', boxShadow:'0px 8px 20px rgba(43, 61, 94, 0.05)',color:' #011B53'}}
             >
               Export <ExpandMoreIcon />
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/">
                 Export PDF
               </a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="/">
                 Export Excel
               </a>
             </div>
           </div>
+
+         
         </div>
       </div>
 
-      <div className="table overflow-auto">
-        <table className=" ">
+      <div className="table overflow-auto text-center sliding-d">
+        <table className="stafftable">
           <thead
             style={{
               background: "rgba(189, 195, 199, 0.5)",

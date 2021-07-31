@@ -1,6 +1,5 @@
 import React from 'react';
 import { ConductedNavbar } from '../../../../Components/ExamNavbar/ExamNavbar';
-
 import { DownArrow, Cross } from '../../../../images/Icons/icons';
 import Navbar from '../../../../Components/Navbar/Navbar';
 import './Conducted.css';
@@ -16,26 +15,26 @@ export default function Conducted({ toggleSidebar, sidebarOpen }) {
     return (
         <div id="page-content-wrapper">
             <Navbar title={'Exams'} toggleSidebar={toggleSidebar} />
-            <ConductedNavbar />
-            <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
+            <ConductedNavbar sidebarOpen={sidebarOpen} />
+            <div id="conducted" className={`container-fluid px-md-4 px-2 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
-                    <div className="d-flex flex-row justify-content-start align-items-center mb-3">
-                        <button className="border-0 d-flex justify-content-center align-items-center subject mr-3 mb-0 text-white position-relative">Physics</button>
-                        <button className="border-0 d-flex justify-content-center align-items-center subject mr-3 mb-0 text-white position-relative">Chemistry</button>
-                        <button className="border-0 d-flex justify-content-center align-items-center subject mr-3 mb-0 text-white position-relative">Maths</button>
+                    <div className="d-flex flex-row justify-content-start align-items-center mb-3 flex-wrap flex-md-nowrap">
+                        <button className="border-0 d-flex justify-content-center align-items-center mr-2 mb-3 mb-md-0 text-white position-relative subject">Physics</button>
+                        <button className="border-0 d-flex justify-content-center align-items-center mr-2 mb-3 mb-md-0 text-black position-relative bg-transparent headerbtn-all">Chemistry</button>
+                        <button className="border-0 d-flex justify-content-center align-items-center mr-2 mb-3 mb-md-0 text-black position-relative bg-transparent headerbtn-all">Maths</button>
                     </div>
-                    <div className="d-flex flex-column p-3 question-box mr-4 mb-5" style={{ width: '70%'}}>
-                        <div className="d-flex flex-row align-items-center justify-content-between mb-2" style={{ width: '60%'}}>
-                                <button className="d-flex flex-row align-items-center justify-content-center border-0 question-dropdown h6 position-relative disabled">
-                                Single Question
+                    <div className="d-flex flex-column p-3 conducted-question-box mr-4 mb-5">
+                        <div className="d-flex flex-row align-items-center conducted-question-box1 justify-content-between mb-2" style={{ width: '50%'}}>
+                                <button className="d-flex flex-row align-items-center justify-content-center border-0 conducted-question-dropdown p6 position-relative disabled">
+                                Single Correct
                                 </button>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Marks:</label>
-                                    <h6>4</h6>
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Marks:</label>
+                                    <p className="mb-0" style={{color: '#063DB5', fontSize: '12px'}}>4</p>
                                 </div>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Negative: </label>
-                                    <h6>4</h6>
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Negative: </label>
+                                    <p className="mb-0" style={{color: '#063DB5', fontSize: '12px'}}>4</p>
                                 </div>
                         </div>
                         <div>
@@ -68,18 +67,18 @@ export default function Conducted({ toggleSidebar, sidebarOpen }) {
                             <button type="button" className="btn-question blue-bg text-white ml-4">Save</button>
                         </div>
                     </div>
-                    <div className="d-flex flex-column p-3 question-box mr-4 mb-5" style={{ width: '70%'}}>
-                        <div className="d-flex flex-row align-items-center justify-content-between mb-2" style={{ width: '60%'}}>
-                                <button className="d-flex flex-row align-items-center justify-content-center border-0 question-dropdown h6 position-relative disabled">
-                                Single Question
+                    <div className="d-flex flex-column p-3 conducted-question-box mr-4 mb-5">
+                        <div className="d-flex flex-row align-items-center conducted-question-box1 justify-content-between mb-2" style={{ width: '50%'}}>
+                                <button className="d-flex flex-row align-items-center justify-content-center border-0 conducted-question-dropdown p6 position-relative disabled">
+                                Single Correct
                                 </button>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Marks:</label>
-                                    <h6>4</h6>
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Marks:</label>
+                                    <p className="mb-0" style={{color: '#063DB5', fontSize: '12px'}}>4</p>
                                 </div>
                                 <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Negative: </label>
-                                    <h6>4</h6>
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Negative: </label>
+                                    <p className="mb-0" style={{color: '#063DB5', fontSize: '12px'}}>4</p>
                                 </div>
                         </div>
                         <div>

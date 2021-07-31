@@ -94,15 +94,11 @@ export default function Studentattendance({ sidebarOpen, toggleSidebar }) {
         }`}
       >
         <div
-          className="row g-3 my-2 mt-2"
-          style={{ backgroundColor: "rgba(189, 195, 199, 0.1)" }}
-        >
+          className="row g-3 my-2 mt-2">
           <div className="container-fluid justify-content-between  d-flex  px-4 pt-3 ">
 
             <div className=" d-flex justify-content-lg-start">
             <div className=" d-flex align-item-center">
-              
-                
                 <input onChange={handleChangeDate} className="mr-2 rounded-pill" type="date" style={{background: '#FFFFFF', boxShadow:' 0px 8px 20px rgba(1, 27, 83, 0.05)'}}  placeholder="Date"  />
                 <select onChange={handleChangeClass} className="form-select rounded-pill  " aria-label="Default select ">
                 <option selected >12th Class</option>
@@ -120,10 +116,7 @@ export default function Studentattendance({ sidebarOpen, toggleSidebar }) {
                 <option value="Chemistry">Chemistry</option>
                 <option value="Mathematics">Mathematics</option>
                 <option value="English">English</option>
-
               </select>
-            
-            
             </div>
             </div>
 
@@ -206,28 +199,24 @@ export default function Studentattendance({ sidebarOpen, toggleSidebar }) {
           </div>
 
           <div className="table overflow-auto d-flex flex-column ">
-          <table >
+          <table className="stafftable">
           <thead
             style={{
               background: 'rgba(189, 195, 199, 0.5)',
-
               color: "#011B53",
             }}
           >
             <tr>
               <th>Sr.No.</th>
               <th>Student Name</th>
-
-              <th>Status</th>
-
-
-              
+              <th>Status</th> 
             </tr>
           </thead>
           <tbody
             style={{
-              color: "rgba(1, 27, 83, 1)",
-              background: "rgba(255, 255, 255, 1)",
+              height: '70px',
+              boxShadow: '0px 2px 30px rgb(27 38 59 / 20%)',
+              background: '#fff',
             }}
           >
           

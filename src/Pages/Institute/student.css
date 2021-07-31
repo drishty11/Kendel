@@ -44,3 +44,8 @@ select option:checked, select option:hover{
 
     }
   }
+  @media (max-width: 340px) {
+    .studentmodalbtn1 {
+      width: 178px !important;
+    }
+  }

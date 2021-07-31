@@ -19,13 +19,13 @@
     border-radius: 20px;
     margin: 0;
   }
-  .toggle-switch-inner {
+  .toggle-switch-inner1 {
     display: block;
     width: 200%;
     margin-left: -100%;
     transition: margin 0.3s ease-in 0s;
   }
-  .toggle-switch-inner::before, .toggle-switch-inner::after {
+  .toggle-switch-inner1::before, .toggle-switch-inner1::after {
     display: block;
     float: left;
     width: 50%;
@@ -36,46 +36,47 @@
     color: white;
     box-sizing: border-box;
   }
-  .toggle-switch-inner:before {
-    content: "present";
+  .toggle-switch-inner1::before {
+    content: "";
     padding-left: 10px;
     background-color:#51CC25;
     color: #fff;
   }
   .toggle-switch-disabled {
-    background-color: #fff;
+    background-color: #ccc;
     cursor: not-allowed;
   }
   .toggle-switch-disabled::before {
     background-color: #ccc;
     cursor: not-allowed;
   }
-  .toggle-switch-inner::after {
-    content: "absent";
+  .toggle-switch-inner1::after {
+    content: "";
     padding-right: 10px;
-    background-color: red;
+    background-color: #011B53;
     color: #fff;
     text-align: right;
   }
-  .toggle-switch-switch {
+  .toggle-switch-switch1 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 24px;
-    margin: 5px;
+    margin: 2px;
     background: #fff;
     position: absolute;
     top: 0;
-    bottom: 0;
-    right: 55px;
+    bottom: 4px;
+    right: 57px;
     border: 0 solid #ccc;
-    border-radius: 20px;
+    border-radius: 44px;
     margin-top: 6px;
     transition: all 0.3s ease-in 0s;
+    height: 23px;
   }
-  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner1 {
     margin-left: 0;
   }
-  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+  .toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch1 {
     right: 2px;
   }

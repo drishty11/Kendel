@@ -22,12 +22,12 @@ const CreateClass = (props) => {
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLongTitle">
+            <h6 className="modal-title" id="exampleModalLongTitle">
               Create Class
-            </h5>
+            </h6>
             <button
               type="button"
-              className="close"
+              className="close pb-0"
               data-dismiss="modal"
               aria-label="Close"
             >
@@ -35,10 +35,9 @@ const CreateClass = (props) => {
             </button>
           </div>
           <div className="modal-body font-weight-normal">
-            <Form className="p-2 ">
-             
+            <Form className="py-2">
               <Form.Group controlId="formGroupEmail">
-                <Form.Label className="float-left">Class Name :</Form.Label>
+                <Form.Label className="float-left mb-2">Class Name :</Form.Label>
                 <Form.Control
                   className="rounded-pill"
                   type="text"
@@ -46,15 +45,18 @@ const CreateClass = (props) => {
                 />
               </Form.Group>
               <Form.Group controlId="formGroupPassword">
-                <Form.Label className="float-left">Subject :</Form.Label>
-                <Form.Control className="rounded-pill" as="select">
+                <Form.Label className="float-left mb-2">Subject :</Form.Label>
+                <Form.Control className="rounded-pill" as="select" xs>
                   <option> select</option>
+                  <option value="1"> Physics</option>
+                  <option value="2"> Chemistry</option>
+                  <option value="3"> Maths</option>
                 </Form.Control>
-                <br />
+                <br/>
                 <div className=" text-center form-group ">
                 <button
-                className="w-25 btn rounded-pill mr-2"
-                style={{background:' rgba(1, 27, 83, 1)', color:'#fff'}}
+                className="btn rounded-pill mr-2"
+                style={{background:' rgba(1, 27, 83, 1)', color:'#fff', width: '35%'}}
                   type="submit"
                   data-dismiss="modal"
                   

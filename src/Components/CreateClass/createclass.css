@@ -8,29 +8,29 @@ line-height: 18px;
 /* identical to box height */
 
 letter-spacing: 0.04em;
-
 color: #011B53;
-
 }
-
+#exampleModalLongTitle {
+    font-size: 16px;
+}
 #exampleModalCenter2 Form Label{
     color: rgba(1, 27, 83, 1);
     margin-bottom: -7px;
     font-size: 14px;
-
-
-
 }
 #exampleModalCenter2 form input{
-
-
     font-weight: normal;
     font-size: 14px;
 }
  option {
     margin-top: -10px;
 }
-
+@media (min-width: 576px){
+#exampleModalCenter2 .modal-dialog {
+    max-width: 350px;
+    margin: 1.75rem auto;
+    }
+}
 /* .class-set{
 
     position:absolute;

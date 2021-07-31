@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BiFace, TiAttachmentOutline, MdSend} from 'react-icons/all';
-import { Send } from '../../images/Icons/icons'
-import { Cross1, Doubt, Doubt1 } from '../../images/Icons/icons';
+import { Send1 } from '../../images/Icons/icons'
+import { Cross1, Doubt, Doubt1, DoubtChatbox } from '../../images/Icons/icons';
 import "./ChatPopup.css";
 
 function StudentDoubt({ text, setText, doubtType }) {
@@ -13,8 +13,8 @@ function StudentDoubt({ text, setText, doubtType }) {
       className="bg-white position-fixed d-flex flex-column Chat-Doubts"
     >
       <div className="header">
-        <div className="d-flex justify-content-between p-4">
-          {doubtType === 'Solved' ?<h5>Anjali Doubts</h5> : <h5 className="text-left">Closed Doubt</h5>}
+        <div className="d-flex justify-content-end align-items-center p-4">
+          {doubtType === 'Solved' ?<p className="mb-0">Anjali's Doubts</p> : <p className="mb-0">Closed Doubt</p>}
          <button onClick={() => setText(!text)} className="border-0 bg-transparent"><Cross1 /></button>
         </div>
       </div>
@@ -26,7 +26,7 @@ function StudentDoubt({ text, setText, doubtType }) {
             <h5 className="timing text-center">Today at 6:20 PM</h5>
             <div className="d-flex justify-content-end sent">
                
-                <p className="bubble right">{msg}</p>
+                <p className="chat-bubble right">{msg}</p>
             </div>
             </>
           ) : ( 
@@ -34,7 +34,7 @@ function StudentDoubt({ text, setText, doubtType }) {
             <h5  className="timing text-center">Today at 6:20 PM</h5>
             <div className="d-flex justify-content-start received">
               
-              <p className="bubble left ml-2.5">{msg}</p>
+              <p className="chat-bubble left ml-2.5">{msg}</p>
             </div>
             </>
           )
@@ -43,20 +43,20 @@ function StudentDoubt({ text, setText, doubtType }) {
     
       <div>
         {doubtType === "Solved" ? (
-          <h6 className="third-text text-center other-bg p-4">
+          <h6 className="third-text text-center other-bg p-3 mb-3">
             Doubt is solved & Thread is closed
           </h6>
         ) : (
-          <div className="chat-input d-flex justify-content-between align-items-center p-2 my-3 mx-auto">
-            <div className="d-flex justify-content-evenly align-items-center pointer">
-              <BiFace size={26} className="mr-1 cursor-pointer" />
-              <input placeholder="Type something...." className="border-0" style={{ outline: 'none'}} /> 
+            <div className="chat-input align-items-center p-2 my-3 mx-auto position-relative">
+              <div className="d-flex align-items-center pointer">
+                <BiFace size={18} className="mr-1 mt-1 cursor-pointer" fill={`#464353`} />
+                <input placeholder="Type something...." className="border-0 input w-75" style={{fontSize: '12px'}} /> 
+              </div>
+              <div className="d-flex align-items-center pointer position-absolute" style={{top: '8px', right: '8px'}}>
+                <TiAttachmentOutline size={18} className="mt-1" fill={`#464353`} />
+                <Send1 />
+              </div>
             </div>
-            <div className="d-flex align-items-center pointer">
-              <TiAttachmentOutline size={26}  />
-              <Send />
-            </div>
-          </div>
         )}
       </div>
     </div>
@@ -142,12 +142,12 @@ function SolvedTab({ chatopen, setChatopen }) {
       ) : (
         <div id="Chat-con" className="bg-white position-fixed">
           <div className="header">
-            <div className="d-flex justify-content-between align-items-center px-4 pt-4 pb-2">
+            <div className="d-flex justify-content-between align-items-center px-4 pt-3 pb-2">
               <div className="d-flex flex-row justify-content-between align-items-center">
               <div className="d-flex justify-content-center align-items-center ChatIcon1 bg-white mr-3">
                 <Doubt />
               </div>
-              <h6 className="mb-0">{activeTab} Doubts</h6>
+              <p className="mb-0">{activeTab} Doubts</p>
               </div>
               <button onClick={() => setChatopen(!chatopen)} className="border-0 bg-transparent"><Cross1 /></button>
             </div>
@@ -160,7 +160,7 @@ function SolvedTab({ chatopen, setChatopen }) {
                   activeTab === "Unsolved"
                     ? "chat-header"
                     : "opacity-3 border-0"
-                } w-25 bg-transparent text-white h6 mb-0`}
+                } w-25 bg-transparent text-white p6 mb-0`}
                 onClick={() => setActiveTab("Unsolved")}
               >
                 Unsolved
@@ -168,7 +168,7 @@ function SolvedTab({ chatopen, setChatopen }) {
               <button
                 className={`${
                   activeTab === "Solved" ? "chat-header" : "opacity-3 border-0"
-                } w-25 bg-transparent text-white h6 mb-0`}
+                } w-25 bg-transparent text-white p6 mb-0`}
                 onClick={() => setActiveTab("Solved")}
               >
                 Solved
@@ -182,16 +182,16 @@ function SolvedTab({ chatopen, setChatopen }) {
                 return (
                   <div
                     key={index}
-                    className="d-flex align-items-center mb-2 px-3 py-3 Solvedmain pointer"
+                    className="d-flex align-items-center mb-3 px-3 py-3 Solvedmain pointer"
                     onClick={() => setText(!text)}
                   >
                     <div className="d-flex justify-content-center align-items-center ChatIcon">
-                      <Doubt1 />
+                      <DoubtChatbox />
                     </div>
                     <div className="d-flex flex-column justify-content-start align-items-start ml-3">
-                      <h6>{msg.heading}</h6>
-                      <span>{msg.class}</span>
-                      <span>{msg.post}</span>
+                      <h6 className="mb-1" style={{ color: '#05060FF2', fontSize: '14px'}}>{msg.heading}</h6>
+                      <span className="mb-1" style={{color: '#464353', fontSize: '10px'}}>{msg.class}</span>
+                      <span className="mb-1" style={{color: '#464353', fontSize: '10px'}}>{msg.post}</span>
                     </div>
                   </div>
                 );

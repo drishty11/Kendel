@@ -81,7 +81,7 @@ export default function ResultInfo({show, close}) {
                         <h6 style={{ fontSize: '14px'}}>75 %</h6>
                     </div>
                     <div className="d-flex flow-row justify-content-start">
-                        <div className="d-flex relative chart1 mr-5"> 
+                        <div className="d-flex relative chart2 mr-5"> 
                             <Doughnut data={data} options={{ responsive: true, maintainAspectRatio:false,cutout: '80%'}}   />
                         </div>
                         <div className="d-flex flex-column py-1 details m-auto"> 

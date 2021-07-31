@@ -1,0 +1,6 @@
+@media (min-width: 576px){
+.modalstudent {
+    max-width: 400px !important;
+    margin: 1.75rem auto;
+}
+}

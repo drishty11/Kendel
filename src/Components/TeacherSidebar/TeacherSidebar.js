@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import  logo  from '../../images/logof.png';
+import  logo  from '../../images/4_dark_bg (1).png';
 import { Link } from 'react-router-dom';
 import { Frame26, Frame27, Frame28, StudentsAll } from '../../images/Icons/icons';
 import './TeacherSidebar.css';
@@ -12,7 +12,7 @@ export default function TeacherSidebar({ sidebarOpen, closeSidebar, category, ac
             <div className="secondary-bg" id="sidebar-wrapper">
                 <div className="sidebar-heading d-flex align-items-center justify-content-evenly text-center py-4 px-2 primary-text ml-md-0">
                     <div className=" d-md-flex d-none logo">
-                       <img src={logo} alt="logo" width="150px" />
+                       <img src={logo} alt="logo" width="180px" />
                     </div>
                 </div>    
 

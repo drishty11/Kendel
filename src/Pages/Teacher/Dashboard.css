@@ -58,6 +58,20 @@
   height: auto;
 }
 
+@media only screen and (min-width: 425px) {
+  #dashboard .board {
+   width: 172px !important; 
+   height: 95px !important;
+   margin-right: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #dashboard .board {
+    width: 215px !important; 
+    height: 95px !important;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .close_sidebar {
     margin-left: -222px;

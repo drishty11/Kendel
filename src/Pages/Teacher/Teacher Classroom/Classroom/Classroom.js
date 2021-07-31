@@ -5,6 +5,7 @@ import { Add, Send, DownArrow } from '../../../../images/Icons/icons';
 import image from '../../../../images/writing.png'
 import Navbar from '../../../../Components/Navbar/Navbar';
 import images from '../../../../images/userimg.jpg';
+import {RiArrowUpSLine} from 'react-icons/all';
 import { DropdownAdd, PostDropdown, StudentDropdown, TeacherDropdown } from '../../../../Components/TeacherDropdown/TeacherDropdown';
 import BreadCrumbs from '../../../../Components/BreadCrumbs/BreadCrumbs';
 
@@ -45,27 +46,24 @@ export default function Classroom({ sidebarOpen, toggleSidebar }) {
         <div id="page-content-wrapper">
             <Navbar title={'Classroom'} toggleSidebar={toggleSidebar} />
             <BreadCrumbs crumbs={breadcrumbPath} />
-            <div id="classes" className={`container-fluid px-4 pt-5 mt-5 mb-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+            <div id="classes" className={`container-fluid px-md-4 px-2 pt-5 mt-5 mb-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                     <form className="w-100 form p-3 mb-4" >
                             <div className="d-flex flex-row align-items-center justify-content-center">
                               {isExpanded ? 
                                (
                                  <div className="w-100">
-                                    <textarea name="content" placeholder="Announce something to your class" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area mb-2 mb-md-4" 
+                                    <textarea name="content" placeholder="Announce something to your class" className="w-100 d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 text-area mb-4" 
                                     rows="4" />
                                     <div className="d-flex flex-column justify-content-between btn-section flex-lg-row ">
-                                      <div className="d-flex justify-content-between btn-1">
-                                        
-                                          <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center" style={{ width: '100px', height: '40px'}} onClick={(e) => setActive('Add')}><Add/> Add</button>
+                                      <div className="d-flex justify-content-between classes-btn-1 mb-lg-2 mb-3">
+                                          <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center" style={{ width: '80px', height: '35px', fontWeight: '600'}} onClick={() => setActive('Add')}><Add/> Add</button>
                                           {active === 'Add' ? <DropdownAdd ref={Dropdownref} /> : '' } 
-                                          <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center" style={{ width: '130px', height: '40px'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' } </button>
-                                         
+                                          <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center" style={{ width: '130px', height: '35px', fontWeight: '600'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' }<DownArrow size={22} className="mt-1" /></button>                          
                                       </div>
-                                      <div className="d-flex justify-content-between btn-2">
-                                          <button type="button" className="dropdownbtn bg-white " style={{ width: '100px', height: '40px'}} onClick={() => onClose()}>Cancel</button>
-                                          <button type="button" className="dropdownbtn bg-white " style={{ width: '130px', height: '40px'}}  onClick={() => setActive('Post')}> Post <DownArrow />{active === 'Post' ? <PostDropdown  ref={Dropdownref} /> : ''}</button>
-                                          
+                                      <div className="d-flex justify-content-between classes-btn-2 mb-lg-2 mb-3">
+                                          <button type="button" className="dropdownbtn bg-white " style={{ width: '100px', height: '35px', fontWeight: '600'}} onClick={() => onClose()}>Cancel</button>
+                                          <button type="button" className="dropdownbtn bg-white " style={{ width: '80px', height: '35px', fontWeight: '600'}}  onClick={() => setActive('Post')}> Post <DownArrow />{active === 'Post' ? <PostDropdown  ref={Dropdownref} /> : ''}</button> 
                                       </div>
                                     </div>
                                   </div>
@@ -93,16 +91,16 @@ export default function Classroom({ sidebarOpen, toggleSidebar }) {
                             <TeacherDropdown />
                           </div>
                         </div>
-                        <div className="d-flex flex-column p-3">
+                        <div className="d-flex flex-column px-3">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                            <div className="row upload m-2 p-3">
-                                <div className="col file px-0" style={{ borderRadius: '8px 0 0 8px'}}>
+                            <div className="d-flex flex-row upload m-2 p-3">
+                                <div className="d-flex flex-row file px-0" style={{ borderRadius: '8px 0 0 8px'}}>
                                     <label className="profile mr-0 mb-0 primary-bg"> 
                                         <input type="file" id="image" accept=".jpg, .jpeg, .png, .mov, .mp4" hidden className=" mt-5 " />
                                     </label>
                                 </div>
-                                <div className="col file px-0" style={{ borderRadius: '0 8px 8px 0'}}>
+                                <div className="d-flex flex-column file px-0" style={{ borderRadius: '0 8px 8px 0'}}>
                                     <h6 className="my-3 mx-2">File Name</h6>
                                     <p className="mb-4 mx-2">Word File</p>
                                 </div>

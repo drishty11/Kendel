@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Ellipse from '../../images/Ellipse.svg';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import { IoClose } from "react-icons/all";
+import './Addstudent.css';
 // import {useContext, useState} from 'react';
 
 export default function Addstudent(props) {
@@ -20,11 +21,11 @@ export default function Addstudent(props) {
       aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-centered" role="document">
+      <div className="modal-dialog modal-dialog-centered modalstudent" role="document">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="exampleModalLongTitle">
-              Edit Student Details
+              Add Student Details
             </h5>
             <button
               type="button"
@@ -70,21 +71,20 @@ export default function Addstudent(props) {
                   placeholder="Enter Class"
                 />
               </Form.Group>
-              <Form.Group controlId="formGroupPassword">
-                
-                <div className=" text-center form-group ">
+              <div className=" text-center form-group">
                 <button
-                className="w-25 btn rounded-pill mr-2"
-                style={{background:' rgba(1, 27, 83, 1)', color:'#fff'}}
+                className="btn rounded-pill mr-2 addteacher-btn"
+                style={{background:' rgba(1, 27, 83, 1)', color:'#fff', width: '18%'}}
                   type="submit"
                   data-dismiss="modal"
                   
                 >
-                  Done
+                  Add
                 </button>
-                
+                <button style={{color:' rgba(1, 27, 83, 1)', borderColor: '#011B53',width: '18%'}}  className="btn rounded-pill addteacher-btn" type="submit" >
+                  Reset
+                </button>
               </div>
-              </Form.Group>
             </Form>
           </div>
         </div>

@@ -27,6 +27,8 @@
 .PostModal { 
     width: 135px;
     height: 100px; 
+    right: 50px;
+    z-index: 9999 !important;
 }  
 
 
@@ -36,6 +38,7 @@
     height: 100px;
     top: 0rem;
     right: 1.5rem;
+    z-index: 9999 !important;
     /* right: 7rem; */
     /* margin-top: 7.5rem !important; */
 }

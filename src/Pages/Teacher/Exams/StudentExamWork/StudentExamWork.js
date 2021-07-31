@@ -43,8 +43,8 @@ export default function StudentExamWork({ toggleSidebar, sidebarOpen }) {
     return (
         <div id="page-content-wrapper">
         <Navbar title={'Assignments'} toggleSidebar={toggleSidebar} />
-        <ConductedNavbar />
-            <div id="StudentExamWork" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+        <ConductedNavbar sidebarOpen={sidebarOpen} />
+            <div id="StudentExamWork" className={`container-fluid px-md-4 px-2 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-5">
                     <div className="w-100 table-header">
                         <table className="w-75">

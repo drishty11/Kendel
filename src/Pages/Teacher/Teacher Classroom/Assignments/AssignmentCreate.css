@@ -51,11 +51,24 @@
  
 
   .points {
-      margin-bottom: 1rem !important;
+      margin-bottom: 10px !important;
   }
 
 
-   
+  .datepickerInput {
+      width: 154px;
+      height: 35px;
+      border-radius: 20px;
+      border: 0.5px solid rgba(70, 67, 83, 0.6);
+      padding: 10px 15px;
+  }
+  .datepicker .react-datepicker__month-container {
+    width: 234px;
+  }
+  .datepicker .react-datepicker__tab-loop .react-datepicker-popper {
+    inset: 0px auto auto -4px !important;
+}
+/*    
  @media (max-width: 800px) {
 
     .btn-section {
@@ -64,20 +77,28 @@
     .btn-1, .btn-2 {
       margin-bottom: 15px;
     }
-  }
-   @media (min-width: 800px) {
+  } */
+   /* @media (min-width: 800px) {
   
-    .btn-section {
-      width: 100%;
+    .btn-1 {
+      width: 500px;
     }
-    .btn-1, .btn-2 {
-      width: 300px;
+    .btn-2 {
+      width: 230px;
     }
     
-  }
-
-  /* @media (max-width: 1030px) {
-    .btn-1 {
-        flex-wrap: wrap !important;
-    }
   } */
+
+  @media (max-width: 1024px) {
+    .btn-1 {
+      width: 100% !important;
+    }
+  }
+  @media (max-width: 500px) {
+    .datepicker .react-datepicker__time-container .react-datepicker__time-box {
+      width: 64px;
+    }
+    .datepicker .react-datepicker__time-container {
+      width: 74px;
+    }
+  }

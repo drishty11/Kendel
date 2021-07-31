@@ -23,12 +23,12 @@ const Classes1 = ({ sidebarOpen, toggleSidebar }) => {
    return (
     <div id="page-content-wrapper" style={{background:' rgba(189, 195, 199, 0.1)'}} >
         <Navbar title={'Classes'} toggleSidebar={toggleSidebar} />
-        <div id="classes" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
-        <div className="row g-3 my-2 mt-2 ">
-      <div className="container-fluid body-class d-flex justify-content-between px-4 pt-2">
+        <div id="classes" className={`container-fluid pl-4 pr-4 pr-lg-5 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+        <div className="row">
+      <div className="container-fluid body-class d-flex justify-content-between all-header-btn pt-2" style={{margin: '40px 0 0 0'}}>
         <button type="button" data-toggle="modal" data-target="#exampleModalCenter2"
-          className="mb-1  btn mr-sm-2 w-sm-25 text-white rounded-pill"
-          onClick={() =>{ setShow(true) }}
+          className="btn mr-sm-2 text-white classes-btn rounded-pill"
+          onClick={() => setShow(true)}
           style={{background:' #EA4444',border: '1px solid #EA4444',boxShadow: '0px 8px 20px rgba(27, 38, 59, 0.15)'}}
         >
           <IoIosAdd className="mr-2 font-weight-bold text-white" />
@@ -40,9 +40,9 @@ const Classes1 = ({ sidebarOpen, toggleSidebar }) => {
           show={show}
         />
 
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-md-center classesdroping-down">
           <button type="button" data-toggle="modal"   data-backdrop="false"   data-target="#exampleModalCenter3"
-            className="mb-1 w-sm-25 ml-3 btn  rounded-pill"
+            className="ml-md-3 mr-2 btn classes-btn1 rounded-pill"
             onClick={() => setFilter(true)}
             style={{background:' #FFFFFF', boxShadow:' 0px 8px 20px rgba(43, 61, 94, 0.05)',color:' #011B53'}}
           >
@@ -58,7 +58,7 @@ const Classes1 = ({ sidebarOpen, toggleSidebar }) => {
 
           <div className="dropdown ">
             <button
-              className="ml-3 mb-1 w-sm-25 btn  rounded-pill"
+              className="ml-md-3 btn classes-btn1 rounded-pill"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
@@ -83,7 +83,7 @@ const Classes1 = ({ sidebarOpen, toggleSidebar }) => {
       </div>
 
       <div className="table overflow-auto sliding-d" style={{ color: "rgba(1, 27, 83, 1)" }}>
-        <table className="stafftable">
+        <table className="classtable">
           <thead style={{ background: " rgba(189, 195, 199, 0.5)" }}>
             <tr style={{ color: "rgba(1, 27, 83, 1)" }}>
               <th>Sr. No.</th>

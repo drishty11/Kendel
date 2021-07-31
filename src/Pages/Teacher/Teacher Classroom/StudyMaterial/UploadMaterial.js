@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import BreadCrumbs from '../../../../Components/BreadCrumbs/BreadCrumbs';
 import Navbar from '../../../../Components/Navbar/Navbar';
+import {RiArrowUpSLine} from 'react-icons/all';
 import { Add, DownArrow } from '../../../../images/Icons/icons';
 import { DropdownAdd, PostDropdown, StudentDropdown } from '../../../../Components/TeacherDropdown/TeacherDropdown';
 import { Link } from 'react-router-dom';
@@ -36,7 +37,7 @@ export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
         <div id="page-content-wrapper">
             <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
             <BreadCrumbs crumbs={breadcrumbPath} />
-            <div id="studymaterial" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+            <div id="uploadmaterial" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-5 px-lg-4 mt-5 d-flex flex-column mb-4">
                     <form className="w-100 form pt-4 pb-2 px-4 my-4">
                         <div className="mb-5">
@@ -47,16 +48,16 @@ export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
                             
                         </div>
                         <div className="d-flex flex-column justify-content-between btn-section flex-lg-row ">
-                            <div className="d-flex justify-content-between btn-1 flex-wrap">
+                            <div className="d-flex justify-content-between classes-btn-1 mb-lg-0 mb-3">
                               
-                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '100px', height: '40px'}} onClick={(e) => setActive('Add')}><Add /> Add</button>
+                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '80px', height: '35px', fontWeight: '600'}} onClick={(e) => setActive('Add')}><Add /> Add</button>
                                 {active === 'Add' ? <DropdownAdd ref={Dropdownref} /> : '' } 
-                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '130px', height: '40px'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' } </button>
+                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '130px', height: '35px', fontWeight: '600'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' }<DownArrow size={22} className="mt-1" /></button>
                               
                             </div>
-                            <div className="d-flex justify-content-between btn-2">
-                                <button type="button" className="dropdownbtn" style={{ width: '100px', height: '40px'}} disabled={title === '' ? true : false}>Cancel</button>
-                                <Link to="/classes/classroom/studymaterial/assignmentname" type="button" className={`${title === '' ? 'disable' : 'able'} dropdownbtn d-flex align-items-center justify-content-center text-decoration-none`} style={{ width: '130px', height: '40px'}} disabled={title === '' ? true : false}> Post</Link>
+                            <div className="d-flex justify-content-between classes-btn-2 mb-lg-0 mb-3">
+                                <button type="button" className="dropdownbtn" style={{ width: '100px', height: '35px', fontWeight: '600'}} disabled={title === '' ? true : false}>Cancel</button>
+                                <Link to="/classes/classroom/studymaterial/assignmentname" type="button" className={`${title === '' ? 'disable' : 'able text-white'} dropdownbtn d-flex align-items-center justify-content-center text-decoration-none`} style={{ width: '80px', height: '35px', fontWeight: '600'}} disabled={title === '' ? true : false}> Post</Link>
                             </div>
                         </div>
                        

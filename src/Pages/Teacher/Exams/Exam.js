@@ -5,6 +5,7 @@ import { SharedDropdown, DraftedDropdown, ConductedDropdown } from '../../../Com
 import { Link,Route } from 'react-router-dom';
 import './Exam.css';
 import ExamModal from '../../../Components/ExamModal/ExamDetails/ExamDetails';
+import {IoIosAdd} from 'react-icons/all';
 import CreateExam from './CreateExam/CreateExam';
 import Conducted from '../Exams/ConductedExam/Conducted';
 import NonConducted from '../Exams/NonConductedExam/NonConducted';
@@ -23,7 +24,7 @@ function Exam({toggleSidebar,sidebarOpen, show }) {
     const sharedExams = [
         {
             name: 'Electromagnetism',
-            date: '2021-07-25',
+            date: '2021-08-05',
             time: '20:00',   
         },
         {
@@ -33,12 +34,12 @@ function Exam({toggleSidebar,sidebarOpen, show }) {
         },
         {
             name: 'Electromagnetism',
-            date: '2021-07-25',
+            date: '2021-08-05',
             time: '20:00',   
         },
         {
             name: 'Electromagnetism',
-            date: '2021-07-03',
+            date: '2021-08-05',
             time: '07:25',   
         },
         {
@@ -86,16 +87,16 @@ function Exam({toggleSidebar,sidebarOpen, show }) {
                 <ExamModal show={editModal} close={toggleEditModal} />    
             </div>
        
-        <Navbar title={'Exams'} toggleSidebar={toggleSidebar} />
-            <nav className="Exam-breadcrumb position-fixed d-flex">
+            <Navbar title={'Exams'} toggleSidebar={toggleSidebar} />
+            <nav className={`Exam-breadcrumb position-fixed d-flex ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <ol className="d-flex flex-row align-items-center mb-0 flex-wrap pl-2">
-                    <div>
-                        <button className={`${examtab === "Shared" ? "exam-header font-weight-bold" : "opacity-3 border-0 exam-disable"} bg-transparent p-2 p-md-3 mt-2 mx-4 other-text h6 mb-0`} onClick={() => setExamtab('Shared')}><h5 className="mb-0">Shared</h5></button>
-                        <button className={`${examtab === "Drafted" ? "exam-header font-weight-bold" : "opacity-3 border-0 exam-disable"} bg-transparent p-2 p-md-3 mt-2 mx-4 other-text h6 mb-0`} onClick={() => setExamtab('Drafted')}><h5 className="mb-0">Drafted</h5></button>
-                    </div>
+                    {/* <div> */}
+                        <button className={`${examtab === "Shared" ? "exam-header font-weight-bold" : "opacity-3 border-0 exam-disable"} bg-transparent p-2 p-md-3 mt-md-2 mt-4 mx-2 other-text h6 mb-0`} onClick={() => setExamtab('Shared')}><h5 className="mb-0">Shared</h5></button>
+                        <button className={`${examtab === "Drafted" ? "exam-header font-weight-bold" : "opacity-3 border-0 exam-disable"} bg-transparent p-2 p-md-3 mt-md-2 mt-4 mx-4 other-text h6 mb-0`} onClick={() => setExamtab('Drafted')}><h5 className="mb-0">Drafted</h5></button>
+                    {/* </div> */}
                 </ol>
             </nav>
-            <button className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none" onClick={() => toggleEditModal()}><Addition height="18px" width="18px" /><span className="d-none d-md-block ml-2">Create Exam</span></button>
+            <button className="position-fixed examupload-btn d-flex align-items-center text-white text-decoration-none" onClick={() => toggleEditModal()}><IoIosAdd size={22} /><span className="d-none d-lg-block" style={{fontSize: '14px'}}>Create Exam</span></button>
             <div id="AllExams" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                     {examtab === 'Shared' ? sharedExams.map((exam,index) => {

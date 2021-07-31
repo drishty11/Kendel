@@ -74,6 +74,9 @@
       -o-transition: margin 0.5s ease-out;
       transition: margin 0.5s ease-out;
     }
+    .sidebarBtn {
+      font-size: 12px;
+  }
   
   }
   

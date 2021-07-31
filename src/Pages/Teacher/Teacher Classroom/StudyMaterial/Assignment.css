@@ -20,3 +20,10 @@
 .lining {
   border-bottom: 0.25px solid #011b53;
 }
+
+.assign-file {
+  /* border-radius: 8px; */
+  border: 0.25px solid #464353;
+  width: 120px;
+  
+}

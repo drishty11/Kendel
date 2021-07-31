@@ -1,6 +1,6 @@
 #Chat-con {
-  width: 325px;
-  height: 500px;
+  width: 300px;
+  height: 450px;
   bottom: 14%;
   right: 3%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -21,7 +21,7 @@
 }
 
 .chat-box {
-  height: 400px;
+  height: 350px;
   overflow-y: scroll;
 }
 
@@ -54,6 +54,7 @@
 }
 .Solvedmain {
   width: 100%;
+  height: 80px;
   background: #c6dff8;
   border-radius: 10px;
 }
@@ -66,7 +67,7 @@
   color: #A6ABBD;
 }
 
-.bubble {
+.chat-bubble {
     position: relative;
     background: linear-gradient(0deg, #93C3FF, #93C3FF);
     color: #000;
@@ -75,7 +76,7 @@
     text-align: center;
     width: fit-content;
     height: 32px;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 11px;
   }
 
@@ -85,7 +86,7 @@
 .received {
   margin-left: 10px !important;
 }
-.bubble.left:after {
+.chat-bubble.left:after {
   content: '';
   position: absolute;
   display: block;
@@ -99,7 +100,7 @@
   margin-top: -7px;
 }
 
-.bubble.right:after {
+.chat-bubble.right:after {
     content: '';
     position: absolute;
     display: block;
@@ -115,16 +116,16 @@
 
 .chat-input {
     border-radius: 20px;
-    border: 1px solid #000;
+    border: 1px solid #BDC3C7;
     width: 90%;
-    height: 50px;
+    height: 40px;
 }
 
 .ChatIcon {
   border-radius: 100%;
   background: #0C5DFF;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
 }
 .ChatIcon1 {
   border-radius: 100%;
@@ -141,17 +142,23 @@
     right: 20px;
   }
 }
+@media (max-width:320px) {
+  #Chat-con {
+    margin-left: -150px !important;
+    width: 300px !important;
+  }
+}
 @media (min-width: 320px) and (max-width: 400px) {
   #Chat-con {
     top: 60%;
-    margin-top: -300px;
+    margin-top: -344px;
     left: 50%;
     margin-left: -162px;
-    height: 600px;
+    height: 537px;
     width: 325px;
-  }
+}
   .chat-box {
-    height: 500px;
+    height: 415px;
   }
 }
 @media (min-width:400px) and (max-width:600px) {

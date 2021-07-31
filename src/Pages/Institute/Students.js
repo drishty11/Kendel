@@ -99,52 +99,54 @@ export default function Student({ sidebarOpen, toggleSidebar }) {
       >
         <div
           className="row g-3 my-2 mt-2"
-          style={{ backgroundColor: "rgba(189, 195, 199, 0.1)" }}
         >
-          <div className="container-fluid justify-content-between  d-flex  px-4 pt-3 ">
-            <button
-              type="button"
-              data-toggle="modal"
-              data-target="#exampleModalCenter7"
-              className=" btn d-block d-sm-inline-block rounded-pill mr-2"
-              style={{
-                fontSize: "13px",
-                backgroundColor: "#EA4444",
-                width: "120px",
-                border: " 1px solid #EA4444",
-                borderRadius: "20px",
-                boxShadow: "0px 8px 20px rgba(27, 38, 59, 0.15)",
-                color: "#fff",
-              }}
-              onClick={() => setAddstudent(true)}
-            >
-              <IoIosAdd />
-              Add Students
-            </button>
-            <Addstudent
-              className="d-flex justify-content-center align-content-center"
-              onClose={() => setAddstudent(false)}
-              addstudent={addstudent}
-            />
-            <div className="d-flex justify-content-lg-start mrs" >
-              <select onChange={handleChange} className="form-select rounded-pill  " aria-label="Default select " style={{color:"#011B53", boxShadow:'none', outline:'none'}}>
-                <option selected >--Select Class--</option>
-                <option value="6th">6th</option>
-                <option value="7th">7th</option>
-                <option value="8th">8th</option>
-                <option value="9th">9th</option>
-                <option value="10th">10th</option>
-                <option value="11th">11th</option>
-                <option value="12th">12th</option>
-              </select>
-            </div>
-
-
-
-            <div className="d-flex justify-content-end ">
-            <div className="dropdown hid">
+          <div className="container-fluid justify-content-between flex-wrap flex-lg-nowrap d-flex px-4 pt-3 ">
+            <div className="d-flex mb-3 mb-lg-0">
                 <button
-                  className="ml-3 mb-1 btn  rounded-pill"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter7"
+                  className=" btn d-block d-sm-inline-block rounded-pill studentmodalbtn1"
+                  style={{
+                    fontSize: "13px",
+                    backgroundColor: "#EA4444",
+                    width: "140px",
+                    border: " 1px solid #EA4444",
+                    borderRadius: "20px",
+                    boxShadow: "0px 8px 20px rgba(27, 38, 59, 0.15)",
+                    color: "#fff",
+                    height: '40px',
+                  }}
+                  onClick={() => setAddstudent(true)}
+                >
+                  <IoIosAdd size={16} />
+                  Add Students
+                </button>
+                <Addstudent
+                  className="d-flex justify-content-center align-content-center"
+                  onClose={() => setAddstudent(false)}
+                  addstudent={addstudent}
+                />
+                <div className="d-flex justify-content-lg-start ml-4" >
+                  <select onChange={handleChange} className="form-select rounded-pill  " aria-label="Default select " style={{color:"#011B53", boxShadow:'none', outline:'none'}}>
+                    <option selected >--Select Class--</option>
+                    <option value="6th">6th</option>
+                    <option value="7th">7th</option>
+                    <option value="8th">8th</option>
+                    <option value="9th">9th</option>
+                    <option value="10th">10th</option>
+                    <option value="11th">11th</option>
+                    <option value="12th">12th</option>
+                  </select>
+                </div>
+            </div>     
+
+
+
+            <div className="d-flex justify-content-md-end justify-content-start flex-wrap flex-md-nowrap ">
+            <div className="dropdown">
+                <button
+                  className="mb-1 btn rounded-pill"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -163,9 +165,9 @@ export default function Student({ sidebarOpen, toggleSidebar }) {
                   </a>
                 </div>
               </div>
-              <div className="dropdown hid">
+              <div className="dropdown">
                 <button
-                  className="ml-3 mb-1 btn  rounded-pill"
+                  className="mx-2 mb-1 btn rounded-pill"
                   type="button"
                   id="dropdownMenuButton"
                   data-toggle="dropdown"
@@ -204,13 +206,11 @@ export default function Student({ sidebarOpen, toggleSidebar }) {
                     boxShadow: "none",
                     outline: "none",
                     paddingLeft: "27px",
+                    width: '118px',
                   }}
                   className="form-control rounded-pill"
                   placeholder="Search"
                 />
-
-
-
             </div>
 
             </form>
@@ -248,7 +248,7 @@ export default function Student({ sidebarOpen, toggleSidebar }) {
 
           <div className="table overflow-auto  d-flex flex-column " >
 
-        <table >
+        <table className="stafftable">
           <thead
             style={{
               background: 'rgba(189, 195, 199, 0.5)',
@@ -267,8 +267,9 @@ export default function Student({ sidebarOpen, toggleSidebar }) {
           </thead>
           <tbody
             style={{
-              color: "rgba(1, 27, 83, 1)",
-              background: "rgba(255, 255, 255, 1)",
+              height: '70px',
+              boxShadow: '0px 2px 30px rgb(27 38 59 / 20%)',
+              background: '#fff',
             }}
           >
           {selectclass==='10th'? studentData.map((staff, index) => {

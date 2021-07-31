@@ -16,7 +16,6 @@
     margin-top: -10rem;
     margin-left: 65rem;
     width: 200px;
-
 } 
 
 #exampleModalCenter3 Form Label {
@@ -64,15 +63,25 @@ option {
         margin-top: -10rem;
         margin-left: 65rem;
         width: 20rem;
-    
     }   
 } 
+@media (min-width: 576px){
+#exampleModalCenter3 .modal-dialog-centered {
+    min-height: calc(100% - 13.5rem);
+    }
+#exampleModalCenter3 .modal-dialog {
+    max-width: 300px;
+    }
+}
+@media (min-width: 768px) {
+.mr-md-5, .mx-md-5 {
+    margin-right: 7rem!important;
+}
+}
 @media screen (min-width:1000px){
     .mod {
         position: absolute;
         margin: auto;
-
         width: 20rem;
-    
     }   
 } 

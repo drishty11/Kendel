@@ -50,3 +50,33 @@
 .missing {
     color: #EA4444;
 }
+
+.underline-points {
+    border-bottom: 1px solid #011B53;
+    line-height: 1.5;
+}
+
+@media (max-width:800px) {
+    #studentwork .student-head {
+        width: 100% !important;
+    }
+    #studentwork table {
+        width: 100% !important;
+    }
+}
+@media (max-width:475px) {
+    #studentwork .studentWork {
+        width: 64% !important;
+    }
+}
+@media (max-width:330px) {
+    #studentwork .student-head {
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: start !important;
+    }
+    #studentwork .second-head {
+        justify-content: space-between !important;
+    }
+
+}

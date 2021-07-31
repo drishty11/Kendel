@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./editstaff.css";
 import Select from 'react-select';
 import Ellipse from "../../images/Ellipse.svg";
+import ModalToggle from '../Toggle/ModalToggle/ModalToggle';
 export default function EditStaff(props) {
   const [inname, setInname] = useState();
   const handleChange = (e) => {
@@ -28,9 +29,9 @@ export default function EditStaff(props) {
       aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-centered" role="document">
+      <div className="modal-dialog modal-dialog-centered teachermodal" role="document">
         <div className="modal-content">
-          <div className="modal-header">
+          <div className="modal-header" style={{padding: '18px 30px'}}>
             <h5 className="modal-title" id="exampleModalLongTitle">
               Edit Teacher
             </h5>
@@ -43,7 +44,7 @@ export default function EditStaff(props) {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div className="modal-body font-weight-normal">
+          <div className="modal-body font-weight-normal" style={{padding: '18px 30px'}}>
             <form>
               <div className="form-row">
                 <div className="form-group col-sm-6">
@@ -90,93 +91,34 @@ export default function EditStaff(props) {
                 </div>
               </div>
               <div className="form-row">
-                <div className="form-group col-sm-6">
-                  <div className="form-row">
-                    <div className="form-group col-sm-3 mr-sm-0 mr-lg-5 mr-md-5">
-                      <label>Add/Remove Students</label>
-                      <div className="form-check float-right form-switch">
-                        <input
-                          className="form-check-input modal-out "
-                          style={{
-                            width: "80px",
-                            height: "34px",
-                            boxShadow: "none",
-                            marginLeft: "-65px",
-                            backgroundImage: `url(${Ellipse})`,
-                            backgroundRepeat: "no-repeat",
-                          }}
-                          type="checkbox"
-                          onClick={() => {}}
-                          id="flexSwitchCheckChecked"
-                        ></input>
-                      </div>
+                    <div className="col-sm-6">
+                        <div className="form-row">
+                            <div className="mb-3">
+                                <label className="mb-2 mr-4">Add/Remove Students</label>
+                                <ModalToggle id="1" />      
+                            </div>
+                            <div className="form-group float-right col-sm-3">
+                                <label className="mb-2">Create Test</label>
+                                <ModalToggle id="2" />  
+                            </div>
+                        </div>
                     </div>
-                    <div className="ml-lg-5 ml-md-5 ml-sm-0 form-group float-right col-sm-3">
-                      <label>Create Test</label>
-                      <div className="form-check float-right form-switch ">
-                        <input
-                          style={{
-                            width: "80px",
-                            height: "34px",
-                            boxShadow: "none",
-                            marginLeft: "-65px",
-                            backgroundImage: `url(${Ellipse})`,
-                            backgroundRepeat: "no-repeat",
-                          }}
-                          className="form-check-input modal-out"
-                          type="checkbox"
-                          id="flexSwitchCheckChecked"
-                        />
-                      </div>
+                    <div className="form-group col-sm-6 mb-2">
+                        <label className="mb-2">Profile Picture:</label>
+                        <div class="custom-file mb-3">
+                          <input
+                            type="file"
+                            class="custom-file-input"
+                            id="customFile"
+                          />
+                          <label class="custom-file-label mb-2" for="customFile">
+                            Choose file
+                          </label>
+                        </div>
                     </div>
-                  </div>
-                  {/* <div className="form-row">
-                  <div className="form-group col-sm-3 mr-sm-0 mr-lg-5 mr-md-5">
-                    <label>Add/Remove Students</label>
-                    <div className="form-check float-right form-switch">
-                      <input
-                        className="form-check-input modal-out "
-                        style={{width:"80px",height:"34px", boxShadow: "none", marginLeft:"-65px",backgroundRepeat:"no-repeat"}}
-                        type="checkbox"
-                        id="flexSwitchCheckChecked"
-                      />
-
-                      </div>
-
-                  
-                  </div>
-                  <div className="ml-lg-5 ml-md-5 ml-sm-0 form-group float-right col-sm-3">
-                    <label>Create Test</label>
-                    <div className="form-check float-right form-switch">
-                      <input
-                       style={{width:"80px",height:"34px", boxShadow: "none",marginLeft:"-65px",backgroundRepeat:"no-repeat"}}
-                        className="form-check-input modal-out"
-                        type="checkbox"
-                        id="flexSwitchCheckChecked"
-                      />
-                      </div>
-
-                  
-                  </div>
-                  </div> */}
                 </div>
-                <div className="form-group col-sm-6">
-                  <label>Profile Picture:</label>
-
-                  {/* <input type="file" class="form-control-file" id="exampleFormControlFile1"/> */}
-
-                  <div class="custom-file">
-                    <input
-                      type="file"
-                      class="custom-file-input"
-                      id="customFile"
-                    />
-                    <label class="custom-file-label" for="customFile">
-                      Choose file
-                    </label>
-                  </div>
-                </div>
-              </div>
+              
+                
               <div className=" text-center form-group ">
                 <button
                   className="w-25 btn rounded-pill mr-2"

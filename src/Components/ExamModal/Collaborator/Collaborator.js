@@ -30,7 +30,6 @@ export default function Collaborator({ toggleSidebar, sidebarOpen, close }) {
 
    
     return (
-        <div className="w-100">
             <div class="collab position-absolute text-black">
                 <div className="d-flex flex-column">
                     <h6 className="mb-3" style={{ color: '#063DB5'}}>Collaborator</h6>
@@ -65,7 +64,6 @@ export default function Collaborator({ toggleSidebar, sidebarOpen, close }) {
                     </div>
                 </div>
             </div>
-        </div>
         
     )
 }

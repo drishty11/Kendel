@@ -27,3 +27,14 @@
 .missing {
     color: #EA4444;
 }
+
+@media (max-width:800px) {
+    #StudentExamWork table {
+        width: 100% !important;
+    }
+}
+@media (max-width:475px) {
+    #StudentExamWork .studentWork {
+        width: 64% !important;
+    }
+}

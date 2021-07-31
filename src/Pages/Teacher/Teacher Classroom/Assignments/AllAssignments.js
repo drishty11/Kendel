@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../../../Components/Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import { Frame29, Addition } from '../../../../images/Icons/icons';
+import {IoIosAdd} from 'react-icons/all';
 import { TeacherDropdown } from '../../../../Components/TeacherDropdown/TeacherDropdown';
 import BreadCrumbs from '../../../../Components/BreadCrumbs/BreadCrumbs';
 
@@ -43,7 +44,7 @@ export default function AllAssignments({ toggleSidebar, sidebarOpen }) {
         <div id="page-content-wrapper">
         <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
         <BreadCrumbs crumbs={breadcrumbPath} />
-        <Link to="/classes/classroom/assignments/assign" className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none"><Addition height="18px" width="18px" /><span className="d-none d-md-block ml-2">Assign Assignment</span></Link>
+        <Link to="/classes/classroom/assignments/assign" className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none"><IoIosAdd size={22} /><span className="d-none d-lg-block ml-2" style={{fontSize: '14px'}}>Assign Assignment</span></Link>
             <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                     {Assignments.map((assignment,index) => {

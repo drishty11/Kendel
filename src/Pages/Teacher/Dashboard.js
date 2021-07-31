@@ -82,12 +82,12 @@ export default function Dashboard({ sidebarOpen, toggleSidebar }) {
   return (
     <div id="page-content-wrapper">
       <Navbar title={'Dashboard'} toggleSidebar={toggleSidebar} />
-      <div id="dashboard" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+      <div id="dashboard" className={`container-fluid pl-4 pr-4 pr-lg-5 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
         <div className="dashboardintro pt-4 px-4 mt-5 d-flex flex-column flex-lg-row justify-content-end text-center mb-4">
-          <div className="media-body d-lg-flex  text-black text-left">
+          <div className="media-body d-lg-flex text-black text-left">
             <div>
               <h4 className="mt-0 mb-3 third-text">Welcome back Anjali!</h4>
-              <p className="h5 mb-0">
+              <p className="h6 mb-0">
                 You can check your today's task in your task bar
               </p>
             </div>
@@ -96,38 +96,37 @@ export default function Dashboard({ sidebarOpen, toggleSidebar }) {
             </div>
           </div>
         </div>
-        <div className="row g-3 my-2">
-          <div className="col-md-6 col-xl-3">
-            <div className=" board p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
+        <div className="d-flex flex-row my-2 flex-wrap flex-lg-nowrap">
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
                 <Classes1All />
               </div>
               <div>
-                <h6 className=" other-text">Total Classes</h6>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="other-text">Total Classes</h6>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
-
-          <div className="col-md-6 col-xl-3">
-            <div className="p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
                 <Students1All />
               </div>
               <div>
                 <h6 className="other-text">Total Students</h6>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-xl-3">
-            <div className="board p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
                 <Exams1All />
               </div>
               <div>
                 <h6 className="other-text">Total Exams</h6>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>

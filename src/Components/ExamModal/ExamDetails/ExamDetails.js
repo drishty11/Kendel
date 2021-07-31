@@ -22,7 +22,7 @@ export default function ExamDetails({ show, close}) {
             </button>
           </div>
           <hr style={{ margin: "0.5rem 0" }} />
-          <form className="px-4 pb-3">
+          <form className="px-4 pb-3 pt-3">
             <div className="d-flex flex-column">
               <label for="classname">Exam Name:</label>
               <input
@@ -140,14 +140,14 @@ export default function ExamDetails({ show, close}) {
             <div className="d-flex flex-row justify-content-between align-items-center mb-4">
               <p className="mb-0 marking mt-1">Marking:</p>
               <label className="main d-flex flex-row justify-content-between align-items-center mb-0 pb-0">
-                <span className="mt-1" style={{ color: "#838383" }}>
+                <span className="mt-2" style={{ color: "#838383" }}>
                   Manual
                 </span>
                 <input type="checkbox" className="mr-2 input" />
                 <span className="geekmark mt-2"></span>
               </label>
               <label className="main d-flex flex-row justify-content-center align-items-center mb-0 pb-0">
-                <span className="mt-1" style={{ color: "#838383" }}>
+                <span className="mt-2" style={{ color: "#838383" }}>
                   Automatic
                 </span>
                 <input type="checkbox" className="mr-2 input" />

@@ -1,5 +1,5 @@
 .resultInfo {
-    max-width: 350px;
+    max-width: 360px;
     width: 100%;
     top: 30px;
     box-shadow: 0px 2px 30px rgba(27, 38, 59, 0.2);
@@ -8,7 +8,7 @@
 }
 
 
-.chart1 {
+.chart1, .chart2 {
     width: 100px;
     height: 150px;
 } 
@@ -20,4 +20,12 @@
 }
 .details {
     width: -webkit-fill-available;
+}
+@media (max-width: 340px) {
+    .resultInfo {
+        width: 300px;
+    }
+    .chart2 {
+        margin-right: 18px !important;
+    }
 }

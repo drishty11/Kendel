@@ -39,24 +39,16 @@
   border-radius: 20px;
  }
 
-
- 
- @media (max-width: 800px) {
-
-   .btn-section {
-    width: 100%;
-  }
-    .btn-1, .btn-2 {
-    margin-bottom: 15px;
-  }
-}
  @media (min-width: 800px) {
 
   .btn-section {
     width: 100%;
   }
-   .btn-1, .btn-2 {
-    width: 300px;
+  .classes-btn-1 {
+    width: 230px;
+  }
+  .classes-btn-2 {
+    width: 200px;
   }
 }
 
@@ -65,9 +57,9 @@
   border-radius: 8px;
 }
 
-.upload {
+/* .upload {
   width: 400px;
-}
+} */
 
  .lining {
   border-bottom: 0.25px solid #011B53;
@@ -76,6 +68,7 @@
 .file {
   /* border-radius: 8px; */
   border: 0.25px solid #464353;
+  width: 140px;
   
 }
 

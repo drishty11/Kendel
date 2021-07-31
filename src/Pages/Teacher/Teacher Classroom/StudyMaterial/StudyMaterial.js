@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../../../../Components/Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import { Addition, Frame29 } from '../../../../images/Icons/icons';
+import {IoIosAdd} from 'react-icons/all';
 import image from '../../../../images/sticky-note.png';
 import { TeacherDropdown } from '../../../../Components/TeacherDropdown/TeacherDropdown';
 import BreadCrumbs from '../../../../Components/BreadCrumbs/BreadCrumbs';
@@ -63,9 +64,8 @@ export default function StudyMaterial({ toggleSidebar, sidebarOpen }) {
     return (
         <div id="page-content-wrapper">
         <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
-        <BreadCrumbs crumbs={breadcrumbPath} />
-            
-            <Link to="/classes/classroom/studymaterial/uploadmaterial" className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none"><Addition height="18px" width="18px" /><span className="d-none d-md-block ml-2">Upload Material</span></Link>
+            <BreadCrumbs crumbs={breadcrumbPath} />    
+            <Link to="/classes/classroom/studymaterial/uploadmaterial" className="position-fixed upload-btn d-flex align-items-center text-white text-decoration-none"><IoIosAdd size={22} /><p className="d-none d-lg-block ml-2 mb-0" style={{fontSize: '14px'}}>Upload Material</p></Link>
             <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
                     {Materials.map((material,index) => {

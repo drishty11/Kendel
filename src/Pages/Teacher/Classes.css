@@ -11,9 +11,23 @@
 
   #classes .content-text {
     color: #A6ABBD;
+    font-size: 12px;
 
   }
   #classes .class-board {
-    border: 0.5px solid #A6ABBD;
+    border: 0.25px solid #dfdfdf;
     border-radius: 8px;
+    width: 100% !important;
+
+  }
+
+  @media only screen and (min-width: 425px) {
+    #classes .class-board {
+     width: 170px !important; 
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    #classes .class-board {
+     width: 200px !important; 
+    }
   }

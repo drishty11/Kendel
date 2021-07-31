@@ -4,7 +4,7 @@ import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Picker from './Components/Options/Picker/Picker';
 // import Verification from './Components/Options/Verification/Verification';
-import Login from './Components/Login/Login';
+// import Login from './Components/Login/Login';
 import Sidebar from './Components/Sidebar/Sidebar';
 import { Profile1,Dashboard1,Classes1,Teacherattendance,Studentattendance,Exam1,Staff,Student } from './Pages/Institute';
 import { Profile, Dashboard, Classes, Exam,CreateExam, Attendance, Settings } from './Pages/Teacher';
@@ -30,7 +30,7 @@ function App() {
     setsidebarOpen(!sidebarOpen);
   }
 
-  const [option, setOption] = useState('Teacher');
+  const [option, setOption] = useState('Institute');
 
 
   return (
@@ -60,23 +60,23 @@ function App() {
 
         <Route path="/exam/createxam" exact="true">
         <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
-        <CreateExam />
+        <CreateExam sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam/conducted/studentwork/studentexamdetails" exact="true">
         <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
-        <StudentExamDetails />
+        <StudentExamDetails sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam/conducted/studentwork" exact="true">
         <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
-        <StudentExamWork />
+        <StudentExamWork sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam/conducted" exact="true">
         <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
-        <Conducted />
+        <Conducted sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         <Route path="/exam/nonconducted" exact="true">
         <Sidebar sidebarOpen={sidebarOpen} activeMenuItem={'exam'} />
-        <NonConducted />
+        <NonConducted sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
 
         <Route path="/exam" exact="true">
@@ -126,35 +126,35 @@ function App() {
 }
       {option === 'Institute' ? 
       <>
-        <Route path="/profile">
+        <Route path="/" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'profile'} />
           <Profile1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/dashboard" >
+        <Route path="/dashboard" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'dashboard'} />
           <Dashboard1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/student" >
+        <Route path="/student" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'student'} />
           <Student sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/classes">
+        <Route path="/classes" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'classes'} />
           <Classes1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/exam">
+        <Route path="/exam" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'exam'} />
           <Exam1 sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/staff">
+        <Route path="/staff" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'staff'} />
           <Staff sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/teacherattendance">
+        <Route path="/teacherattendance" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'teacherattendance'} />
           <Teacherattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
-        <Route path="/studentattendance">
+        <Route path="/studentattendance" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'studentattendance'} />
           <Studentattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>

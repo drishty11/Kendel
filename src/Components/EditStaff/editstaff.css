@@ -40,3 +40,9 @@ letter-spacing: 0.04em;
     z-index: 100;
     background-color: #fff;
 } */
+
+@media (min-width: 576px){
+    .teachermodal {
+        max-width: 750px !important;
+        }
+    }

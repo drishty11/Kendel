@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { ProfileUser, DashboardAll, ClassesAll, StudentsAll, ExamsAll, SettingsAll, LogoutAll } from '../../images/Icons/icons';
+import { ProfileUser, DashboardAll, ClassesAll, StudentsAll, InstituteExam, SettingsAll, LogoutAll } from '../../images/Icons/icons';
 import { RiGroupLine, IoCheckboxOutline } from 'react-icons/all';
 import { Link } from "react-router-dom";
 import  images  from "../../images/userimg.jpg";
-import  logo  from '../../images/logof.png'
+import  logo  from '../../images/4_dark_bg (1).png';
 import "./Sidebar.css";
 
 export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMenuItem }) {
@@ -18,7 +18,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
       <div className="secondary-bg" id="sidebar-wrapper">
           <div className="sidebar-heading d-flex align-items-center justify-content-evenly text-center py-4 px-2 primary-text ml-md-0">
             <div className=" d-md-flex d-none logo">
-               <img src={logo} alt="logo" width="150px" />
+               <img src={logo} alt="logo" width="180px" />
             </div>
             <div>
               <img width="70" height="70" className="user-img rounded-full rounded-md d-md-none mb-3" src={images} alt="user" />
@@ -60,7 +60,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
               activeMenuItem === 'staff' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
-            <RiGroupLine className="me-2 mr-3 navicon" /> Staff
+            <StudentsAll /> Staff
           </Link> : ''
           }
           {category === 'institute' ? 
@@ -79,7 +79,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
               activeMenuItem === 'exam' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
-            <ExamsAll />  Exam
+            <InstituteExam />  Exam
           </Link>
           {category === 'institute' ? 
           <Link
@@ -88,7 +88,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
               activeMenuItem === 'attendance' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
-            <IoCheckboxOutline className="me-2 mr-3 navicon" />
+            <IoCheckboxOutline className="me-2 mr-3 navicon" size={16} />
             <div class="dropdown">
               <button className="btn p-0 m-0" style={{boxShadow:"none", color:"#fff", fontSize:"14px"}} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Attendance

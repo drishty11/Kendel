@@ -4,6 +4,7 @@
 }
 .boxes {
   border-radius: 8px;
+  border: 0.25px solid rgba(252, 163, 17, 0.3);
 }
 .profile-head {
     transform: translateY(4.5rem);

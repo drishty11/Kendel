@@ -1,6 +1,6 @@
-.stafftable {
+.stafftable, .classtable {
     border-collapse: collapse;
-    box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff;
+    /* box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff; */
     border-radius: 10px;
     overflow: hidden;
     margin: 25px 0;
@@ -9,18 +9,18 @@
     text-align: center;
     list-style: none;
   }
-.stafftable thead {
+.stafftable thead,.classtable thead {
   height: 50px;
 }
 
-.stafftable thead tr {
+.stafftable thead tr,.classtable thead tr {
   background: #BDC3C7;
   color: #05060FF2;
   font-weight: bold;
   text-align: center;
 }
 
-.stafftable tbody {
+.stafftable tbody, .classtable tbody {
   height: 50px;
 }
 
@@ -52,9 +52,29 @@
 
 .content-text {
   color: #A6ABBD;
-
 }
 .class-board {
   border: 0.5px solid #A6ABBD;
   border-radius: 8px;
+}
+.classes-btn {
+  width: 150px;
+  height: 45px;
+}
+.classes-btn1 {
+  width: 100px;
+  height: 45px;
+}
+@media (max-width: 400px) {
+  .all-header-btn {
+    flex-wrap: wrap;
+  }
+  .classes-btn{
+    width: 150px;
+    margin-bottom: 10px !important;
+  }
+  .classesdroping-down {
+    width: 100%;
+    justify-content: space-between !important;
+  }
 }

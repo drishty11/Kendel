@@ -6,8 +6,8 @@ import './QuestionType.css';
 
 const Subjective = ({question}) => {
     return (
-        <div className="w-100 mb-5">
-            <div className="d-flex flex-row align-items-center mb-4">
+        <div className="w-100 mb-3">
+            <div className="d-flex flex-row align-items-center mb-3">
                 <input type="text" className="d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 question-area mr-3" />
                 <BiImageAdd size={26} style={{ color: '#838383' }} />
             </div>
@@ -22,8 +22,8 @@ const Subjective = ({question}) => {
 }
 const Numerical = ({question}) => {
     return (
-        <div className="w-100 mb-5">
-            <div className="d-flex flex-row align-items-center mb-4">
+        <div className="w-100 mb-3">
+            <div className="d-flex flex-row align-items-center mb-3">
                 <input type="text" className="d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 question-area mr-3" />
                 <BiImageAdd size={26} style={{ color: '#838383' }} />
             </div>
@@ -33,8 +33,8 @@ const Numerical = ({question}) => {
 }
 const ShortAnswer = ({question}) => {
     return (
-        <div className="w-100 mb-5">
-            <div className="d-flex flex-row align-items-center mb-4">
+        <div className="w-100 mb-3">
+            <div className="d-flex flex-row align-items-center mb-3">
                 <input type="text" className="d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 question-area mr-3" />
                 <BiImageAdd size={26} style={{ color: '#838383' }} />
             </div>
@@ -53,33 +53,33 @@ const MultipleCorrect = ({question}) => {
             <div className="multiple-checkbox d-flex mb-3">
                 <input type="checkbox" id="multiple-checkbox1" />
                 <label for="multiple-checkbox1"></label>
-                <div className="questionInput ml-4 mr-4">
+                <div className="questionInput mx-3">
                     <input id="" type="text" className="border-0" value={question?.option[0]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
             <div className="multiple-checkbox d-flex mb-3">
                 <input type="checkbox" id="multiple-checkbox2" />
                 <label for="multiple-checkbox2"></label>
-                <div className="questionInput ml-4 mr-4">
+                <div className="questionInput  mx-3">
                     <input id="" type="text" className="border-0" value={question?.option[1]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
             <div className="multiple-checkbox d-flex mb-3">
                 <input type="checkbox" id="multiple-checkbox3" />
                 <label for="multiple-checkbox3"></label>
-                <div className="questionInput ml-4 mr-4">
+                <div className="questionInput mx-3">
                     <input id="" type="text" className="border-0" value={question?.option[2]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
@@ -89,8 +89,8 @@ const MultipleCorrect = ({question}) => {
                 <div className="questionInput ml-4 mr-4">
                     <input id="" type="text" className="border-0" value={question?.option[3]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
@@ -119,8 +119,8 @@ const SingleCorrect = ({question}) => {
                 <div className="questionInput ml-4 mr-4">
                     <input id="" type="text" className="border-0" value={question?.option[0]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
@@ -130,8 +130,8 @@ const SingleCorrect = ({question}) => {
                 <div className="questionInput ml-4 mr-4">
                     <input id="" type="text" className="border-0" value={question?.option[1]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
@@ -141,8 +141,8 @@ const SingleCorrect = ({question}) => {
                 <div className="questionInput ml-4 mr-4">
                     <input id="" type="text" className="border-0" value={question?.option[2]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>
@@ -152,8 +152,8 @@ const SingleCorrect = ({question}) => {
                 <div className="questionInput ml-4 mr-4">
                     <input id="checkbox3" type="text" className="border-0" value={question?.option[3]} />
                 </div>
-                <div>
-                    <BiImageAdd size={20} className="mr-3" style={{ color: '#838383' }} />
+                <div className="d-flex flex-row">
+                    <BiImageAdd size={20} className="mr-2" style={{ color: '#838383' }} />
                     <Cross />
                 </div>
             </div>

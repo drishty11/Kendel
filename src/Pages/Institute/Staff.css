@@ -1,4 +1,4 @@
-.addTeacher {
+/* .addTeacher {
   width: 140px;
   height: 35px;
   border-radius: 20px;
@@ -36,4 +36,58 @@
 
 .stafftable thead th, .stafftable tbody td {
   padding: 12px 35px;
+} */
+
+.addTeacher {
+  width: 140px;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.addTeacher:hover {
+    background: #EA4444;
+    
+}
+
+.stafftable {
+    border-collapse: collapse;
+    /* box-shadow: 2px 4px 5px #d9d9d9, -2px -2px 5px #ffffff; */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+  }
+.stafftable thead {
+  height: 50px;
+}
+
+.stafftable thead tr {
+  
+  font-weight: bold;
+  text-align: center;
+}
+
+.stafftable tbody {
+  height: 50px;
+}
+
+.stafftable thead th, .stafftable tbody td {
+  padding: 12px 35px;
+}
+
+@media (max-width: 400px) {
+  .all-header-btn {
+    flex-wrap: wrap;
+  }
+  .classes-btn{
+    width: 150px;
+    margin-bottom: 10px !important;
+  }
+  .staffdroping-down {
+    width: 100%;
+    justify-content: space-between !important;
+  }
 }

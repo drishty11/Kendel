@@ -72,5 +72,32 @@
     transform: rotate(-45deg);
   }
   
+  @media (max-width:1024px) {
+    #studentexamdetail .question-box {
+        width: 100% !important;
+    }
+}
+@media (max-width:500px) {
+    #studentexamdetail .studentWork {
+        width: 64% !important;
+    }
+    #studentexamdetail .question-dropdown {
+      width: 138px;
+      height: 40px;
+    }
+    #studentexamdetail .correctanswer {
+      width: 100% !important;
+    }
+}
+@media (max-width: 380px) {
+    #studentexamdetail .question-dropdown {
+      width: 134px;
+      height: 40px;
+      font-size: 14px;
+    }
+    #studentexamdetail .marklabel {
+      font-size: 13px;
+    }
+}
   
     

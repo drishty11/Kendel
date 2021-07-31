@@ -108,6 +108,8 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
           }
         ]);
         setList('');
+        setAddSection(false);
+
       };
 
       const editItem = (index) => {
@@ -128,13 +130,28 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
         <>
         <div id="page-content-wrapper">
             <Navbar title={'Exams'} toggleSidebar={toggleSidebar} />
-            <ExamNavbar />
-            <div id="studymaterial" className={`container-fluid px-4 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
+            <ExamNavbar sidebarOpen={sidebarOpen} />
+            <div id="studymaterial" className={`container-fluid px-md-4 px-2 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
                 <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
-                    <div className="d-flex flex-row justify-content-start align-items-center mb-2 ">
-                        <div className="d-flex flex-row align-items-center">
+                    <div className="d-flex flex-row justify-content-start align-items-center mb-2 ml-md-0 ml-3">
+                        <div className="d-flex flex-row align-items-center position-relative ">
                             <button type="button" className="d-flex border-0 bg-white p-0" onClick={() => setAddSection(!openAddSection)}><GrFormAdd className="addSection" /></button>
                             <button type="button"  className={`${tags.length === 0 ? 'd-flex' : 'd-none' } mb-0 ml-2 border-0 bg-white p-0 mr-5 h6`}  onClick={() => setAddSection(!openAddSection)} style={{ fontSize: '12px' }}>Add Section</button> 
+                            {openAddSection ?
+                                // <div className="w-100" ref={addsectionref}>
+                                    <div className="bubble position-absolute" ref={addsectionref}>
+                                        <div className="d-flex flex-column">
+                                            <h6 className="mb-3">Add Section</h6>
+                                            <input type="text" className="examInput w-100 mb-3" value={list} onChange={e => setList(e.target.value)} placeholder="Add Section" />
+                                        </div>
+                                        <div className="d-flex flex-row justify-content-around align-items-center">
+                                            <button type="button" className="border-0 bg-white btn-cancel" onClick={closeAddSection}>Cancel</button>
+                                            <button type="button" className="border-0 text-white btn-add" onClick={addItem}>Add</button>
+                                        </div>
+                                    </div>
+                                // </div> 
+                                : ''
+                            }
                             {tags.map((tag, index) => ( 
                                 <div className="position-relative">
                                     <button className="border-0 d-flex justify-content-center align-items-center subject mx-3 mb-0 text-white position-relative" onClick={(e) => openEdit(tag.name,e)} key={index}>{tag.name}</button>
@@ -149,7 +166,7 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                                             </div>
                                             <div className="d-flex flex-row justify-content-around align-items-center">
                                                 <button type="button" className="border-0 bg-white btn-cancel" onClick={closeEditSection}>Cancel</button>
-                                                <button type="button" className="border-0 text-white btn-add" onClick={() => editItem(index)}>Add</button>
+                                                <button type="button" className="border-0 text-white btn-add" onClick={() => editItem(index)}>Edit</button>
                                             </div>
                                         </div>
                                     </div> : ''
@@ -158,26 +175,14 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                             </div> ))}
                         </div>
                     </div>
-                    {openAddSection ?
-                        <div className="w-100" ref={addsectionref}>
-                            <div className="bubble position-absolute">
-                                <div className="d-flex flex-column">
-                                    <h6 className="mb-3">Add Section</h6>
-                                    <input type="text" className="examInput w-100 mb-3" value={list} onChange={e => setList(e.target.value)} placeholder="Add Section" />
-                                </div>
-                                <div className="d-flex flex-row justify-content-around align-items-center">
-                                    <button type="button" className="border-0 bg-white btn-cancel" onClick={closeAddSection}>Cancel</button>
-                                    <button type="button" className="border-0 text-white btn-add" onClick={addItem}>Add</button>
-                                </div>
-                            </div>
-                        </div> : ''}
+                  
                     <p className="para third-text mb-3">*Double click to edit or delete section</p>
-                    <div className="d-flex flex-column">
+                    <div className={`flex-column ${tags.length === 0 ? 'd-none' : 'd-flex' }`}>
                         {questionlist.map((question,index) => {
                             return (
-                                <div className="w-75 d-flex flex-column p-3 question-box mr-4 mb-5">
+                                <div className="w-75 d-flex flex-column p-3 question-box mr-lg-4 mr-0 mb-5">
                                     <div className="d-flex flex-row align-items-center justify-content-between mb-2">
-                                        <button className="d-flex flex-row align-items-center justify-content-center border-0 question-dropdown h6 position-relative"  onClick={() => setActive('QuestionType')}>{question.questiontype}<DownArrow />
+                                        <button className="d-flex flex-row align-items-center justify-content-center border-0 conducted-question-dropdown p6 position-relative mr-md-4 mr-2"  onClick={() => setActive('QuestionType')}>{question.questiontype}<DownArrow />
                                         {active === 'QuestionType' ? 
                                             <div id="QuestionTypeModal" className="QuestionTypeModal d-flex flex-column position-absolute bg-white border-0 my-2" ref={Dropdownref} >
                                                 <div className="QuestionTypeModal-content border-0 d-flex flex-column justify-content-center align-items-center">
@@ -190,13 +195,13 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                                             </div>
                                          : ''}
                                         </button>
-                                        <div className="d-flex flex-row align-items-center justify-content-center">
-                                            <label className="text-black h6 mr-2">Marks:</label>
-                                            <input type="text" className="questionInput w-25 mb-3" style={{ textAlign: 'center'}} />
+                                        <div className="d-flex flex-row align-items-center justify-content-center mr-md-4 mr-2">
+                                            <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Marks:</label>
+                                            <input type="text" className="questionInput mb-3" style={{ textAlign: 'center', width: '24px'}} />
                                         </div>
-                                        <div className="d-flex flex-row align-items-center justify-content-center">
-                                            <label className="text-black h6 mr-2">Negative:</label>
-                                            <input type="text" className="questionInput w-25 mb-3" style={{ textAlign: 'center'}} />
+                                        <div className="d-flex flex-row align-items-center justify-content-center mr-md-4 mr-2">
+                                            <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Marks:</label>
+                                            <input type="text" className="questionInput mb-3" style={{ textAlign: 'center',width: '24px'}} />
                                         </div>
                                         <div className="d-flex flex-row align-items-center justify-content-center">
                                             <button className={`${save ? 'd-flex' : 'd-none'} border-0 bg-white mr-2`}><MdModeEdit size={24} /></button>
@@ -216,9 +221,9 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                             )
                         })}
                         <div className="d-flex flex-row ">
-                        <div className="w-75 d-flex flex-column p-3 question-box mr-4">
-                            <div className="d-flex flex-row align-items-center justify-content-between mb-2">
-                                <button className="d-flex flex-row align-items-center justify-content-center border-0 question-dropdown h6 position-relative" onClick={() => setActive('QuestionType')}>{QuestionType}<DownArrow />
+                        <div className="d-flex flex-column p-3 question-box mr-lg-4 mr-0">
+                            <div className="d-flex flex-row align-items-center mb-2">
+                                <button className="d-flex flex-row align-items-center justify-content-center border-0 conducted-question-dropdown p6 position-relative mr-md-4 mr-2" style={{ fontSize: '14px'}} onClick={() => setActive('QuestionType')}>{QuestionType}<DownArrow />
                                 {active === 'QuestionType' ? 
                                     <div id="QuestionTypeModal" className="QuestionTypeModal d-flex flex-column position-absolute bg-white border-0 my-2" ref={Dropdownref} >
                                         <div className="QuestionTypeModal-content border-0 d-flex flex-column justify-content-center align-items-center">
@@ -231,15 +236,15 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                                     </div>
                                  : ''}
                                 </button>
-                                <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Marks:</label>
-                                    <input type="text" className="questionInput w-25 mb-3" style={{ textAlign: 'center'}} />
+                                <div className="d-flex flex-row align-items-center justify-content-center mr-md-4 mr-2">
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Marks:</label>
+                                    <input type="text" className="questionInput mb-3" style={{ textAlign: 'center', width: '24px'}} />
                                 </div>
-                                <div className="d-flex flex-row align-items-center justify-content-center">
-                                    <label className="text-black h6 mr-2">Negative:</label>
-                                    <input type="text" className="questionInput w-25 mb-3" style={{ textAlign: 'center'}} />
+                                <div className="d-flex flex-row align-items-center justify-content-center mr-md-4 mr-2">
+                                    <label className="text-black mr-2 mb-0" style={{fontSize: '13px', fontWeight: '600'}}>Negative:</label>
+                                    <input type="text" className="questionInput mb-3" style={{ textAlign: 'center', width: '24px'}} />
                                 </div>
-                                <div className="d-flex flex-row align-items-center justify-content-center">
+                                <div className="d-flex flex-row align-items-center justify-content-center mr-2">
                                     <button className={`${save ? 'd-flex' : 'd-none'} border-0 bg-white mr-2`}><MdModeEdit size={24} /></button>
                                     <button className={`${save ? 'd-flex' : 'd-none'} border-0 bg-white mr-2`}><MdDelete size={24} /></button>
                                 </div>
@@ -254,7 +259,7 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                                 <button type="button" className="btn-question blue-bg text-white ml-4" onClick={() => setSave(!save)}>Save</button>
                                 </div>
                             </div>
-                            <div className="d-flex flex-column align-items-center justify-content-center option-btn px-1 py-2" >
+                            <div className="d-flex align-items-center option-btn px-1 py-2" >
                                 <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " style={{color:'#0C5DFF'}}><img width="16" src={add} alt="add" onClick={addQuestion} />Add Question</button>
                                 <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " ><img width="16" src={photos} alt="photos" />Add Bundle</button>
                                 <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " ><IoMdCloudDownload size={22} style={{ color: '#838383' }} />Import</button>

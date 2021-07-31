@@ -1,12 +1,5 @@
 import React ,{useState} from "react";
-import {
-
-  MdClass,
-  FaUserFriends,
-  IoMdCopy,
-} from "react-icons/all";
-
-
+import { Classes1All, Students1All, Exams1All } from '../../images/Icons/icons';
 import frame from '../../images/Frame 28.png';
 import InstituteTables from "../../Components/InstituteTable/InstituteTable";
 import "./Dashboard.css";
@@ -86,15 +79,13 @@ export default function Dashboard1({ sidebarOpen, toggleSidebar }) {
 
   return (
     <div id="page-content-wrapper">
-     <Navbar title={'Dashboard'} toggleSidebar={toggleSidebar} />
-    
-      
-      <div id="dashboard" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+     <Navbar title={'Dashboard'} toggleSidebar={toggleSidebar} />      
+      <div id="instituedashboard" className={`container-fluid pl-4 pr-4 pr-lg-5 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
         <div className="intro pt-4 px-4 mt-5 d-flex flex-column flex-lg-row justify-content-end text-center mb-4">
-          <div className="media-body d-lg-flex  text-black text-left">
+          <div className="media-body d-lg-flex text-black text-left">
             <div>
               <h4 className="mt-0 mb-3 third-text">Welcome back Anjali!</h4>
-              <p className="h5 mb-0">
+              <p className="h6 mb-0">
                 You can check your today's task in your task bar
               </p>
             </div>
@@ -103,50 +94,48 @@ export default function Dashboard1({ sidebarOpen, toggleSidebar }) {
             </div>
           </div>
         </div>
-        <div className="row g-3 my-2">
-          <div className="board col-md-6 col-xl-3">
-            <div className=" board p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
-                <MdClass size={30} />
-                {/* <span class="material-icons-outlined">class</span> */}
+        <div className="d-flex flex-row my-2 flex-wrap">
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
+                <Classes1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Classes</h5>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="other-text">Total Classes</h6>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
-
-          <div className="board col-md-6 col-xl-3">
-            <div className="p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
-                <FaUserFriends size={30} />
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
+                <Students1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Students</h5>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="other-text">Total Students</h6>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
-          <div className="board col-md-6 col-xl-3">
-            <div className="board p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
-                <FaUserFriends size={30} />
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
+                <Exams1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Teachers</h5>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="other-text">Total Teachers</h6>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
-          <div className="board col-md-6 col-xl-3">
-            <div className="board p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
-              <div className="d-flex justify-content-center align-items-center circle rounded-full icons">
-                <IoMdCopy size={30} />
+          <div className="board w-100 d-flex flex-row mr-xl-5 mr-md-4 mr-sm-0">
+            <div className="w-100 p-3 shadow-sm d-flex justify-content-around align-items-center rounded mb-3 content-bg">
+              <div className="d-flex justify-content-center align-items-center circle rounded-full icons mr-3">
+                <Students1All />
               </div>
               <div>
-                <h5 className="h5 other-text">Total Exams</h5>
-                <p className="fs-5 third-text">10</p>
+                <h6 className="other-text">Total Exams</h6>
+                <h6 className="fs-5 third-text mb-0">10</h6>
               </div>
             </div>
           </div>
@@ -155,21 +144,21 @@ export default function Dashboard1({ sidebarOpen, toggleSidebar }) {
             <div className="dataTable d-flex flex-column overflow-hidden">
           <div className="">
             <div className="button-section d-flex flex-row align-items-center secondary-bg overflow">
-              <button className={`${changeData === 'Classes' ? 'changeTab text-white active' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mr-3 ml-3 button-div`} onClick={() => setChangeData('Classes')}>
+              <button className={`${changeData === 'Classes' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mx-md-3 mx-1 button-div`} onClick={() => setChangeData('Classes')}>
                  Classes
               </button>
-              <button className={`${changeData === 'Teachers' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mr-3 ml-3 button-div`} onClick={() => setChangeData('Teachers')}>
+              <button className={`${changeData === 'Teachers' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mx-md-3 mx-1 button-div`} onClick={() => setChangeData('Teachers')}>
                 Teachers
               </button>
-              <button className={`${changeData === 'Students' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mr-3 ml-3 button-div`} onClick={() => setChangeData('Students')}>
+              <button className={`${changeData === 'Students' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mx-md-3 mx-1 button-div`} onClick={() => setChangeData('Students')}>
                 Students
               </button>
-              <button className={`${changeData === 'Exams' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mr-3 ml-3 button-div`} onClick={() => setChangeData('Exams')}>
+              <button className={`${changeData === 'Exams' ? 'changeTab text-white' : 'bg-white border-0 other-text' } d-flex justify-content-center align-items-center mx-md-3 mx-1 button-div`} onClick={() => setChangeData('Exams')}>
                 Exams
               </button>
 
             </div>
-            {changeData === 'Classes' ? <InstituteTables data = {data1} changeData={changeData} />: <InstituteTables data={data} changeData={changeData} />}
+            {changeData === 'Classes' ? <InstituteTables data = {data} changeData={changeData} />: <InstituteTables data={data1} changeData={changeData} />}
             
 
           </div>
