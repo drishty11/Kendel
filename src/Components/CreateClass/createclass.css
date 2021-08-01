@@ -25,6 +25,9 @@ color: #011B53;
  option {
     margin-top: -10px;
 }
+.multiselection .css-yk16xz-control {
+    border-radius: 20px !important;
+}
 @media (min-width: 576px){
 #exampleModalCenter2 .modal-dialog {
     max-width: 350px;

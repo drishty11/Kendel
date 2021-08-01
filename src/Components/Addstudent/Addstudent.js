@@ -65,11 +65,9 @@ export default function Addstudent(props) {
               </Form.Group>
               <Form.Group controlId="formGroupNumber">
                 <Form.Label className="float-left"> Class :</Form.Label>
-                <Form.Control
-                  className="rounded-pill"
-                  type="text"
-                  placeholder="Enter Class"
-                />
+                <Form.Control className="rounded-pill" as="select">
+                  <option> Anjali Doda</option>
+                </Form.Control>
               </Form.Group>
               <div className=" text-center form-group">
                 <button

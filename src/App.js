@@ -30,7 +30,7 @@ function App() {
     setsidebarOpen(!sidebarOpen);
   }
 
-  const [option, setOption] = useState('Institute');
+  const [option, setOption] = useState('Teacher');
 
 
   return (

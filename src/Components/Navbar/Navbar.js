@@ -77,7 +77,7 @@ export default function Navbar({title, toggleSidebar}) {
                 <Dropdown.Toggle className="shadow-none border-0 d-flex" variant="none" id="dropdown-basic">
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu>
+                <Dropdown.Menu className="dropdowntop">
                   <Dropdown.Item href="/Profile">
                     <BiUser />
                     My Profile

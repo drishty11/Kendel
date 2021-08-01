@@ -50,6 +50,8 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
     const [save, setSave] = useState(false)
     const [newQuestion, setNewQuestion] = useState(null);
     const [questionlist, setQuestionlist] = useState([]);
+    const [addBundle, setAddbundle] = useState(false);
+    const [selectedImg, setSelectedImg] = useState(['']);
 
     // const [questionlist, setQuestionlist] = useState([
     //     {
@@ -125,14 +127,38 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
           setEditSection(tag);
       }
 
+    function handlePreview(e: any) {
+      if (e.target.files) {
+        const filesArray = Array.from(e.target.files).map((file) => URL.createObjectURL(file));
+        setSelectedImg((prevImages) => prevImages.concat(filesArray));
+        console.log(filesArray);
+      }
+    }
+
+      function Allbundles() {
+          return (
+            <div className="d-flex flex-column justify-content-center align-items-center py-4 px-2 mb-5 bundles">
+                <h6>Bulk Image Upload</h6>
+                <div className="mb-0 position-relative my-2">
+                    <div className="position-absolute">
+                        <input type="file" id="image" accept=".jpg, .jpeg, .png, .mov, .mp4" hidden onChange={handlePreview} />
+                    </div>
+                    <label className={`${selectedImg.length < 7 ? '' : 'hidden'} d-flex justify-content-center align-items-center uploadImg other-text mb-0`} htmlFor="image">Upload</label>
+                </div> 
+            </div>
+          )
+      }
+
+     
+
 
     return (
         <>
         <div id="page-content-wrapper">
             <Navbar title={'Exams'} toggleSidebar={toggleSidebar} />
             <ExamNavbar sidebarOpen={sidebarOpen} />
-            <div id="studymaterial" className={`container-fluid px-md-4 px-2 pt-5 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
-                <div className="pt-4 px-lg-4 mt-5 d-flex flex-column mb-4">
+            <div id="studymaterial" className={`container-fluid px-md-4 px-2 pt-4 mt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{ height: '100vh' }}>
+                <div className="pt-4 mt-5 d-flex flex-column mb-4">
                     <div className="d-flex flex-row justify-content-start align-items-center mb-2 ml-md-0 ml-3">
                         <div className="d-flex flex-row align-items-center position-relative ">
                             <button type="button" className="d-flex border-0 bg-white p-0" onClick={() => setAddSection(!openAddSection)}><GrFormAdd className="addSection" /></button>
@@ -259,14 +285,15 @@ export default function CreateExam({ toggleSidebar, sidebarOpen }) {
                                 <button type="button" className="btn-question blue-bg text-white ml-4" onClick={() => setSave(!save)}>Save</button>
                                 </div>
                             </div>
-                            <div className="d-flex align-items-center option-btn px-1 py-2" >
+                            <div className="d-flex align-items-center option-btn px-1 py-2 bg-white">
                                 <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " style={{color:'#0C5DFF'}}><img width="16" src={add} alt="add" onClick={addQuestion} />Add Question</button>
-                                <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " ><img width="16" src={photos} alt="photos" />Add Bundle</button>
+                                <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " onClick={() => setAddbundle(!addBundle)}><img width="16" src={photos} alt="photos" />Add Bundle</button>
                                 <button type="button" className="border-0 bg-white p-0 d-flex flex-column align-items-center justify-content-center py-3 " ><IoMdCloudDownload size={22} style={{ color: '#838383' }} />Import</button>
                             </div>
                         </div>
                     </div>      
                 </div>
+                {addBundle ? <Allbundles /> : ''}
             </div>
         </div>    
         </> 

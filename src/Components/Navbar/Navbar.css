@@ -30,7 +30,9 @@
   .navbar-nav .dropdown-menu{
     position: absolute !important;
   }
-  
+  .dropdowntop {
+    inset: 25px auto auto 0px !important;
+  }
   @media only screen and (max-width: 600px) {
     
     .topNav {

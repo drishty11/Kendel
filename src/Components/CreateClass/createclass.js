@@ -1,10 +1,18 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
+import Select from 'react-select';
 import "./createclass.css";
 
 
 
 const CreateClass = (props) => {
+
+  const optionselect = [
+    { value: 'Physics', label: 'Physics' },
+  { value: 'Chemistry', label: 'Chemistry' },
+  { value: 'Mathematics', label: 'Mathematics' },
+  { value: 'Science', label: 'Science' },
+  ]
 
   if (!props.show) {
     return null;
@@ -44,14 +52,9 @@ const CreateClass = (props) => {
                   placeholder="Enter your name"
                 />
               </Form.Group>
-              <Form.Group controlId="formGroupPassword">
+              <Form.Group controlId="formGroupPassword" className="d-flex flex-column">
                 <Form.Label className="float-left mb-2">Subject :</Form.Label>
-                <Form.Control className="rounded-pill" as="select" xs>
-                  <option> select</option>
-                  <option value="1"> Physics</option>
-                  <option value="2"> Chemistry</option>
-                  <option value="3"> Maths</option>
-                </Form.Control>
+                <Select isMulti={true} className="selectmulti multiselection" options={optionselect} />
                 <br/>
                 <div className=" text-center form-group ">
                 <button

@@ -44,7 +44,7 @@ const ShortAnswer = ({question}) => {
 }
 const MultipleCorrect = ({question}) => {
     return (
-        <div className="w-100 mb-3">
+        <div className="w-100">
             <div className="d-flex flex-row align-items-center mb-3">
                 <input type="text" className="d-flex justify-content-center align-items-center border-top-0 border-left-0 border-right-0 p-3 question-area mr-3" value={question?.question} />
                 <BiImageAdd size={26} style={{ color: '#838383' }} />
