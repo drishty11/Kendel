@@ -6,7 +6,7 @@ import './App.css';
 // import Verification from './Components/Options/Verification/Verification';
 // import Login from './Components/Login/Login';
 import Sidebar from './Components/Sidebar/Sidebar';
-import { Profile1,Dashboard1,Classes1,Teacherattendance,Studentattendance,Exam1,Staff,Student } from './Pages/Institute';
+import { Profile1,Dashboard1,Classes1,Teacherattendance,Studentattendance,Exam1,Staff,Student,WebsiteBuilder,MainPage } from './Pages/Institute';
 import { Profile, Dashboard, Classes, Exam,CreateExam, Attendance, Settings } from './Pages/Teacher';
 import Footer from './Components/Footer/Footer';
 import TeacherSidebar from './Components/TeacherSidebar/TeacherSidebar';
@@ -30,7 +30,7 @@ function App() {
     setsidebarOpen(!sidebarOpen);
   }
 
-  const [option, setOption] = useState('Teacher');
+  const [option, setOption] = useState('Institute');
 
 
   return (
@@ -157,6 +157,13 @@ function App() {
         <Route path="/studentattendance" exact="true">
           <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'studentattendance'} />
           <Studentattendance sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+        </Route>
+        <Route path="/createwebsite/mainpage" exact="true">
+          <MainPage category="institute" />
+        </Route>
+        <Route path="/createwebsite" exact="true">
+          <Sidebar sidebarOpen={sidebarOpen} category='institute' activeMenuItem={'createwebsite'} />
+          <WebsiteBuilder sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
         </Route>
         </> : ''
       }

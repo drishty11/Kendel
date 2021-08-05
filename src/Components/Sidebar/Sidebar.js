@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ProfileUser, DashboardAll, ClassesAll, StudentsAll, InstituteExam, SettingsAll, LogoutAll } from '../../images/Icons/icons';
+import {BuilderIcon} from '../../images/Icons/icons';
 import { RiGroupLine, IoCheckboxOutline } from 'react-icons/all';
 import { Link } from "react-router-dom";
 import  images  from "../../images/userimg.jpg";
@@ -79,7 +80,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
               activeMenuItem === 'exam' && "active text-decoration-none"
             } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
           >
-            <InstituteExam />  Exam
+            <InstituteExam />  <span className="ml-2">Exam</span>
           </Link>
           {category === 'institute' ? 
           <Link
@@ -90,7 +91,7 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
           >
             <IoCheckboxOutline className="me-2 mr-3 navicon" size={16} />
             <div class="dropdown">
-              <button className="btn p-0 m-0" style={{boxShadow:"none", color:"#fff", fontSize:"14px"}} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <button className="btn p-0 m-0" style={{boxShadow:"none", color:"#fff", fontSize:"12px"}} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Attendance
               </button>
               <div className="dropdown-menu"  aria-labelledby="dropdownMenuButton">
@@ -103,6 +104,14 @@ export default function Sidebar({ sidebarOpen, closeSidebar, category, activeMen
           }
          <hr className="opacity-5 bg-white py-0.25 border-0" /> 
           <p class="text-uppercase px-4 py-1 mb-0 text-white" style={{ fontSize: '12px' }}>Others</p>
+          <Link
+            to="/createwebsite"
+            className={`${
+              activeMenuItem === 'settings' && "active text-decoration-none"
+            } sidebar text-decoration-none d-flex justify-content-start align-items-center text-white`}
+          >
+            <BuilderIcon />  Website Builder
+          </Link>
           <Link
             to="/settings"
             className={`${

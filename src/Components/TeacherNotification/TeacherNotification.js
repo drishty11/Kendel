@@ -8,7 +8,8 @@ import Select from 'react-select';
 // import {useContext, useState} from 'react';
 
 export default function TeacherNotification(props) {
-  const [toggle, setToggle] = useState('false')
+  const [toggle, setToggle] = useState(false);
+  const [secondtoggle, secondsetToggle] = useState(false);
   if (!props.show) {
     return null;
   }
@@ -85,11 +86,11 @@ export default function TeacherNotification(props) {
                         <div className="form-row">
                             <div className="mb-2">
                                 <label className="mb-2 mr-4">Add/Remove Students</label>
-                                <ModalToggle id="1" />      
+                                <ModalToggle id="1" toggle={toggle} setToggle={setToggle} />      
                             </div>
                             <div className="form-group float-right col-sm-3">
                                 <label className="mb-2">Create Test</label>
-                                <ModalToggle id="2" />  
+                                <ModalToggle id="2" toggle={secondtoggle} setToggle={secondsetToggle} />  
                             </div>
                         </div>
                     </div>

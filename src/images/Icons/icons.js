@@ -314,10 +314,17 @@ function Addition({prop}) {
     )
 }
 
+function BuilderIcon() {
+    return (
+        <svg width="14" height="14" className="mr-2" viewBox="0 0 389 389" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25 0C126 0 263 0 364 0C378 0 389 11 389 25V364C389 378 378 389 364 389H25C11 389 0 378 0 364V25C0 11 11 0 25 0ZM170 31C179 31 186 38 186 47C186 55 179 62 170 62C161 62 154 55 154 47C154 38 161 31 170 31ZM111 31C120 31 127 38 127 47C127 55 120 62 111 62C103 62 95 55 95 47C95 38 103 31 111 31ZM52 31C61 31 68 38 68 47C68 55 61 62 52 62C44 62 37 55 37 47C37 38 44 31 52 31ZM25 93H364V364H25V93Z" fill="#fff"/>
+        </svg>
+    )
+}
 
 
 
 
 export {ProfileUser, DashboardAll, ClassesAll, StudentsAll, ExamsAll, SettingsAll, LogoutAll, Classes1All, Students1All,InstituteExam, Exams1All, Cross, Cross1, Doubt, Doubt1,DoubtChatbox, ThreeDot, Frame26, 
-    Frame27, Frame28, Frame29, LinkImg, Upload, Send, Send1, LeftArrow, LeftArrow1, DownArrow, Add, RightArrow, RightArrow1, Addition}
+    Frame27, Frame28, Frame29, LinkImg, Upload, Send, Send1, LeftArrow, LeftArrow1, DownArrow, Add, RightArrow, RightArrow1, Addition,BuilderIcon}
 

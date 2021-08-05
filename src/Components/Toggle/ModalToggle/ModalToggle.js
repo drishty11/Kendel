@@ -29,10 +29,11 @@ const ToggleSwitch = ({id, name, checked, onChange, optionLabels, small, disable
       </div>
     );
 }  
-export default function ModalToggle({id}) {
+export default function ModalToggle({id, toggle, setToggle}) {
 
-  let [toggle, setToggle] = useState(false);
+  // let [toggle, setToggle] = useState(false);
   const Toggling = (checked) => {
+    // console.log(toggle);
     setToggle(checked);
   };
     return (
@@ -43,6 +44,7 @@ export default function ModalToggle({id}) {
       </div>
     )
 }
+
 
 ToggleSwitch.defaultProps = {
     optionLabels: ["present", "absent"]
