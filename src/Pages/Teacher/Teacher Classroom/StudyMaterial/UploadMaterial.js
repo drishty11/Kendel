@@ -5,20 +5,27 @@ import {RiArrowUpSLine} from 'react-icons/all';
 import { Add, DownArrow } from '../../../../images/Icons/icons';
 import { DropdownAdd, PostDropdown, StudentDropdown } from '../../../../Components/TeacherDropdown/TeacherDropdown';
 import { Link } from 'react-router-dom';
+import { PDFReader } from 'reactjs-pdf-reader';
+import {Openpdf, Fileupload} from '../../../../Components/TeacherModal/Fileupload/Fileupload';
+// import {Fileupload} from '../../../../Components/TeacherModal/Fileupload/Fileupload';
 
-export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
-
+  
+export default function UploadMaterial({ toggleSidebar, sidebarOpen,file }) {
+  
     const breadcrumbPath = [
         {to: '/classes', label: 'Classes',},
         {to: '/classes/classroom', label: 'Class Name'},
         {to: '/classes/classroom/studymaterial', label: 'Study Material'},
         {to: '/classes/classroom/studymaterial/uploadmaterial', label: 'Upload Material'},
     ]
-
     const Dropdownref = useRef(null);
     const [active, setActive] = useState('');
     const [title, setTitle] = useState('');
-
+    // const [url, setUrl] = React.useState('');
+    const [uploadModal,setuploadModal] = useState(false);
+    const togglefileupload = () => {
+        setuploadModal(!uploadModal);
+    }
     useEffect(() => {
       const checkIfClickedOutside = e => {
        
@@ -35,9 +42,14 @@ export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
     }, [active])
     return (
         <div id="page-content-wrapper">
+            <div className={`${uploadModal ? 'exam-background' : '' } w-100 position-fixed`}></div> 
+            {uploadModal ?     
+                <div className="d-flex justify-content-center align-items-center">
+                    <Fileupload show={uploadModal} close={togglefileupload} />    
+                </div> : '' }
             <Navbar title={'Study Material'} toggleSidebar={toggleSidebar} />
             <BreadCrumbs crumbs={breadcrumbPath} />
-            <div id="uploadmaterial" className={`container-fluid px-4 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`}>
+            <div id="uploadmaterial" className={`container-fluid bg-white px-md-4 px-2 pt-5 ${sidebarOpen ? 'sidebarActive' : ''}`} style={{height: '100vh'}}>
                 <div className="pt-5 px-lg-4 mt-5 d-flex flex-column mb-4">
                     <form className="w-100 form pt-4 pb-2 px-4 my-4">
                         <div className="mb-5">
@@ -50,9 +62,9 @@ export default function UploadMaterial({ toggleSidebar, sidebarOpen }) {
                         <div className="d-flex flex-column justify-content-between btn-section flex-lg-row ">
                             <div className="d-flex justify-content-between classes-btn-1 mb-lg-0 mb-3">
                               
-                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '80px', height: '35px', fontWeight: '600'}} onClick={(e) => setActive('Add')}><Add /> Add</button>
-                                {active === 'Add' ? <DropdownAdd ref={Dropdownref} /> : '' } 
-                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '130px', height: '35px', fontWeight: '600'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' }<DownArrow size={22} className="mt-1" /></button>
+                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3 " style={{ width: '80px', height: '35px', fontWeight: '600'}} onClick={(e) => setActive('Add')}><Add /> Add</button>
+                                {active === 'Add' ? <DropdownAdd ref={Dropdownref} uploadModal={uploadModal} togglefileupload={togglefileupload}  /> : '' } 
+                                <button type="button" className="dropdownbtn other-text d-flex justify-content-center align-items-center mb-3" style={{ width: '130px', height: '35px', fontWeight: '600'}} onClick={() => setActive('Student')} >All Students {active === 'Student' ? <StudentDropdown ref={Dropdownref} /> : '' }<div><DownArrow /></div></button>
                               
                             </div>
                             <div className="d-flex justify-content-between classes-btn-2 mb-lg-0 mb-3">

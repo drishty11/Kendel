@@ -32,6 +32,7 @@ const ConductedNavbar = ({sidebarOpen}) => {
     const toggleExamname = () => {
         setExamname(!examname);
     }
+    
     return (
         <>
         <div className={`${examname ? 'exam-background' : '' } w-100 position-fixed`}></div>

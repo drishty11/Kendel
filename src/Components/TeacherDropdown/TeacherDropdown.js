@@ -1,16 +1,23 @@
 import React, { useState, useEffect, useRef, forwardRef} from 'react';
 import './TeacherDropdown.css';
 import { Upload, LinkImg, ThreeDot  } from '../../images/Icons/icons';
+import Fileupload from '../TeacherModal/Fileupload/Fileupload';
 
 
 const DropdownAdd = React.forwardRef((props,ref) => {  
+    // const [uploadModal,setuploadModal] = useState(false);
+    // const togglefileupload = () => {
+    //     setuploadModal(!uploadModal);
+    // }
     return (
-        <div id="addModal" className="addModal d-flex flex-column  position-absolute bg-white border-0 my-5" ref={ref}>
+        <>
+            <div id="addModal" className="addModal d-flex flex-column position-absolute bg-white border-0 my-5" ref={ref}>
                 <div className="addModal-content border-0 d-flex flex-column">
-                    <button type="button" className="modal-btn bg-white px-3 text-align-left w-100 border-0 other-text"><Upload />File Upload</button>
+                    <button type="button" className="modal-btn bg-white px-3 text-align-left w-100 border-0 other-text" onClick={() => props.togglefileupload()}><Upload />File Upload</button>
                     <button type="button" className="modal-btn bg-white px-3 text-align-left w-100 border-0 other-text"><LinkImg />Link</button>
                 </div>
-        </div>
+            </div>  
+        </>
     )
 })
 

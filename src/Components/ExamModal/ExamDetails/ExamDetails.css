@@ -35,7 +35,28 @@
     border-radius: 20px;
     border: 1px solid #011B53;
   }
+  .examdetailstartcalender .react-datepicker__tab-loop .react-datepicker-popper, .examdetailendcalender .react-datepicker__tab-loop .react-datepicker-popper {
+    transform: translate3d(18px, 34px, 0px) !important;
+  }
+  .examdetailstartcalender .react-datepicker-popper .react-datepicker__triangle, .examdetailendcalender .react-datepicker-popper .react-datepicker__triangle {
+    left: 45px !important;
+  }
 
+/* #examModal .examdetailcalender .react-datepicker-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 0.25px solid #838383;
+    font-size: 12px;
+}   */
+
+/* .examdetailcalender input[type="datetime-local"]:not(.has-value):before{
+    color: lightgray;
+    content: attr(placeholder);
+}
+.examdetailcalender  input[type="datetime-local"]:focus:before {
+    content: '' !important;
+  } */
 
 
   

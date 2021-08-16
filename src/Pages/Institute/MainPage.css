@@ -106,7 +106,7 @@
         margin-left: 128px !important;
     }
 }
-@media (max-width: 770px) {
+@media (min-width:426px) and (max-width: 770px) {
     .topimage {
         width: 475px;
     }
@@ -127,25 +127,56 @@
 @media (max-width: 426px) {
     .first-container {
         width: 100% !important;
+        position: relative !important;
     }
     .inner-work p{
-        font-size: 15px !important;
+        font-size: 18px !important;
+    }
+    .inner-work {
+        width: 62% !important;
     }
     .third-img, .fourth-img, .fifth-img, .sixth-img {
-        width: 316px !important;
+        width: 415px !important;
     }
     .still-img {
         width: 100%;
     }
     .third-container, .fifth-container {
         margin-left: 25px !important;
+        width: 100%;
+        justify-content: flex-end;
     }
     .fourth-container, .sixth-container {
-        margin-right: 25px !important;
+        margin-left: 115px !important;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .third-container p, .fifth-container p,  .fourth-container p, .sixth-container p {
+        font-size: 30px !important;
+    }
+    .third-container ul li, .fifth-container ul li, .fourth-container ul li, .sixth-container ul li {
+        font-size: 22px;
     }
     .last-sectionbtn button {
         width: 185px !important;
         height: 40px !important;
         font-size: 18px !important;
+    }
+    .third-container button, .fourth-container button, .fifth-container button,.sixth-container button{
+        height: 45px !important;
+        font-size: 18px !important;
+    }
+}
+@media (max-width: 320px) {
+    .third-container p, .fifth-container p,  .fourth-container p, .sixth-container p {
+        font-size: 40px !important;
+    }
+    .third-container ul li, .fifth-container ul li, .fourth-container ul li, .sixth-container ul li {
+        font-size: 31px !important;
+    }
+    .third-container button, .fourth-container button, .fifth-container button, .sixth-container button {
+        height: 72px !important;
+        font-size: 25px !important;
+        width: 215px !important;
     }
 }

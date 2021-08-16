@@ -63,3 +63,9 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
 }
+
+.exam-background {
+    background: rgba(5, 6, 15, 0.2);
+    z-index: 9996 !important;
+    height: 100vh;
+  }

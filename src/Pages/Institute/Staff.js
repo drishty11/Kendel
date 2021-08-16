@@ -76,7 +76,7 @@ export default function Staff({  sidebarOpen, toggleSidebar  }) {
         <button type="button" data-toggle="modal" data-target="#exampleModalCenter"
           className=" btn text-white classes-btn rounded-pill d-flex justify-content-center align-items-center"
           style={{fontSize:"13px",backgroundColor:"#EA4444",width:"120px",height: '45px',border:" 1px solid #EA4444", borderRadius :"20px", boxShadow:"0px 8px 20px rgba(27, 38, 59, 0.15)",color:"#fff"}}
-          type="submit"
+          type="button"
           onClick={() => setShow(true)} >
           <IoIosAdd size={20}  className="font-weight-bold text-white"/>
             Add Teacher

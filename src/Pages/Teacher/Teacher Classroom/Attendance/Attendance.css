@@ -16,9 +16,9 @@
     border: 0;
     padding: 10px 15px;
 }
-.react-datepicker__tab-loop .react-datepicker-popper {
+.attendaceDatepicker .react-datepicker__tab-loop .react-datepicker-popper {
     inset: 0px auto auto -22px !important;
 }
-.react-datepicker__year-wrapper{
+.attendaceDatepicker .react-datepicker__year-wrapper{
     max-width: 204px !important;
 }

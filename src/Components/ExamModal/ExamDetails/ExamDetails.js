@@ -3,11 +3,38 @@ import { Cross } from "../../../images/Icons/icons";
 import { Link } from "react-router-dom";
 import calender from "../../../images/calendar.png";
 import "./ExamDetails.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 // import CreateExam from "../../../Pages/Teacher/Exams/CreateExam/CreateExam";
 // import Exam from "../../../Pages/Teacher/Exams/Exam";
 
 export default function ExamDetails({ show, close}) {
   const [createExam, setCreateExam] = useState(false);
+  const [startDate, setStartDate] = useState();
+  // const [isOpen, setIsOpen] = useState(false);
+  const [date,setdate] = useState(new Date());
+  const handleChange = (d) => {
+    // setIsOpen(!isOpen);
+    const newDate =  (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear()+ ' ' + d.getHours() + ':' + d.getMinutes();
+    console.log(newDate);
+    setStartDate(newDate);
+    setdate(d);
+  };
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   setIsOpen(!isOpen);
+  // };
+
+  const CalenderStart = React.forwardRef(({ value, onClick }, ref) => (
+      <div type="text" id="" name="" placeholder="" onClick={onClick} ref={ref} className="position-absolute example-custom-input" style={{top: '-15px', right: '1px'}}>
+        <img src={calender} alt="calender" width="16" height="16" className="calender mr-3" style={{cursor: 'pointer'}}  />
+      </div>
+  ));
+  const CalenderEnd = React.forwardRef(({ value, onClick }, ref) => (
+      <div type="text" id="" name="" placeholder="" onClick={onClick} ref={ref} className="position-absolute example-custom-input" style={{top: '-15px', right: '1px'}}>
+        <img src={calender} alt="calender" width="16" height="16" className="calender mr-3" style={{cursor: 'pointer'}}  />
+      </div>
+  ));
   return (
     <>
       {show ? (
@@ -81,39 +108,33 @@ export default function ExamDetails({ show, close}) {
             </div>
             <div>
               <label for="">Start date & time:</label>
-              <div className="d-flex flex-row position-relative">
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  placeholder="Choose Start date & time"
-                  className="px-3 py-2 w-100"
-                />
-                <img
-                  src={calender}
-                  alt="calender"
-                  width="16"
-                  height="16"
-                  className="position-absolute calender mr-3"
+              <div className="d-flex flex-row position-relative examdetailstartcalender">
+               <input type="text" id="calender" name="calender" value={startDate} placeholder="Choose Start date & time" style={{cursor: 'pointer'}} className="w-100 px-3 py-2" />
+                <DatePicker
+                  placeholderText="Choose Start date & time"
+                  className=""
+                  selected={date}
+                  customInput={<CalenderStart />}
+                  onChange={handleChange}
+                  timeInputLabel="Time:"
+                  dateFormat="MM/dd/yyyy h:mm aa"
+                  showTimeInput
                 />
               </div>
             </div>
             <div>
               <label for="">Start date & time:</label>
-              <div className="d-flex flex-row position-relative">
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  placeholder="Choose Start date & time"
-                  className="px-3 py-2 w-100"
-                />
-                <img
-                  src={calender}
-                  alt="calender"
-                  width="16"
-                  height="16"
-                  className="position-absolute calender mr-3"
+              <div className="d-flex flex-row position-relative examdetailendcalender">
+                <input type="text" id="calender" name="calender" value={startDate} placeholder="Choose Start date & time" style={{cursor: 'pointer'}} className="w-100 px-3 py-2" />
+                <DatePicker
+                  placeholderText="Choose Start date & time"
+                  className=""
+                  selected={date}
+                  customInput={<CalenderEnd />}
+                  onChange={handleChange}
+                  timeInputLabel="Time:"
+                  dateFormat="MM/dd/yyyy h:mm aa"
+                  showTimeInput
                 />
               </div>
             </div>

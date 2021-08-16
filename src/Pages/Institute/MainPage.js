@@ -1,4 +1,5 @@
 import React from 'react';
+import top from '../../images/jeswin-thomas-wRdYnqXtyYk-unsplash.jpg'
 import top1 from '../../images/Group 223.png';
 import top2 from '../../images/Group 221.png';
 import why from '../../images/Group 225.png';
@@ -18,22 +19,23 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                     <div className="d-flex flex-column row first-container position-absolute first" style={{ width: '58%'}}>
                         <img src={top1} alt="top2" className="d-flex p-0 topimage" style={{height: '548px'}} />
                         <div className="d-flex flex-column justify-content-start align-items-start position-absolute text-white inner-work p-4" style={{ width: '56%', marginLeft: '55px'}}>
-                            <p className="mb-5" style={{ fontSize: '20px'}}>Kendel Institute</p>
+                            <h6 className="mb-5" style={{ fontSize: '22px'}}>Kendel Institute</h6>
                             <div className="d-flex flex-column justify-content-evenly align-items-start">
-                                <div className="mt-5">
+                                <div className="mt-md-5 mt-0">
                                     <p className="mb-4" style={{ fontSize: '20px'}}>About Us</p>
                                     <p style={{ fontSize: '12px'}}>I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills. 
                                     I am friendly, helpful and polite, have a good sense of humour. I am able to work independently 
                                     in busy environments and also within a team setting. I am outgoing and tactful, and able to listen effectively 
                                     when solving problems.I am a punctual and motivated individual who is able to work in a busy environment 
-                                    and produce high standards of work. I am an excellent team worker and am able to take instructions from 
-                                    all levels and build up good working relationships with all colleagues. I am flexible, reliable and 
-                                    possess excellent time keeping skills.</p>
+                                    and produce high standards of work.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="d-md-flex flex-column first-container position-absolute d-none" style={{right: '0'}}>
+                    {/* <div className="w-100 d-flex d-md-none flex-column first-container" style={{right: '0'}}>
+                        <img src={top} alt="top" className="d-flex p-0 topimage" />
+                    </div> */}
+                    <div className="d-flex flex-column align-items-end first-container position-absolute" style={{right: '0'}}>
                         <img src={top2} alt="top1" className="d-flex p-0 topimage" />
                     </div>
                 </div>
@@ -64,7 +66,7 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                 <div className="d-flex flex-column justify-content-center align-items-center position-relative why-container" style={{color: '#063DB5'}}>
                     <img src={whycircle} alt="whycircle" className="position-absolute" style={{ left: '0', top: '-80px'}} />
                     <h4 className="d-flex">Why Kendel<p className="why" style={{marginLeft: '8px'}}>Institute?</p></h4>
-                    <div className="d-flex flex-row justify-content-between align-items-center w-100">
+                    <div className="d-flex flex-md-row flex-column-reverse justify-content-between align-items-center w-100">
                         <div className="d-flex flex-column third-container" style={{ marginLeft: '300px'}}>
                             <p style={{ fontSize: '20px', color: '#063DB5', fontWeight: '600'}}>Individual Attention</p>
                             <ul>
@@ -80,8 +82,8 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                     </div>
                 </div>
                 <div className="d-flex flex-row" style={{color: '#063DB5'}}>
-                    <div className="d-flex flex-row justify-content-between align-items-center w-100">
-                        <div className="d-flex align-items-start fourth-container">
+                    <div className="d-flex flex-md-row flex-column justify-content-between align-items-center w-100">
+                        <div className="d-flex align-items-start fourth-container m-0">
                             <img src={fourthcircle} alt="fourthcircle" className="fourth-img" style={{width: '450px'}} />
                         </div>
                         <div className="d-flex flex-column fourth-container" style={{ marginRight: '300px'}}>
@@ -96,7 +98,7 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                     </div>
                 </div>
                 <div className="d-flex flex-row" style={{color: '#063DB5'}}>
-                    <div className="d-flex flex-row justify-content-between align-items-center w-100">
+                    <div className="d-flex flex-md-row flex-column-reverse justify-content-between align-items-center w-100">
                         <div className="d-flex flex-column fifth-container" style={{ marginLeft: '300px'}}>
                             <p style={{ fontSize: '20px', color: '#063DB5', fontWeight: '600'}}>Updated Study Material</p>
                             <ul>
@@ -112,12 +114,12 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                     </div>
                 </div>
                 <div className="d-flex flex-row" style={{color: '#063DB5'}}>
-                    <div className="d-flex flex-row justify-content-between align-items-center w-100">
-                        <div className="d-flex align-items-start sixth-container">
+                    <div className="d-flex flex-md-row flex-column justify-content-between align-items-center w-100">
+                        <div className="d-flex align-items-start sixth-container m-0">
                             <img src={sixth} alt="sixth" className="sixth-img" style={{width: '450px'}} />
                         </div>
                         <div className="d-flex flex-column sixth-container" style={{ marginRight: '300px'}}>
-                            <p style={{ fontSize: '20px', color: '#063DB5', fontWeight: '600'}}>Expert Faculty</p>
+                            <p style={{ fontSize: '20px', color: '#063DB5', fontWeight: '600'}}>Instant Doubt Solving</p>
                             <ul>
                                 <li>Learn from experienced JEE faculty to improve understanding and retention of concepts</li>
                                 <li>Learn from experienced JEE faculty to improve understanding and retention of concepts</li>
@@ -127,7 +129,7 @@ export default function MainPage({toggleSidebar,sidebarOpen}) {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex justify-content-center align-items-center mx-auto position-relative text-white" style={{ height: '150px'}}>
+                <div className="d-flex justify-content-center align-items-center mx-auto position-relative text-white mt-3" style={{ height: '150px'}}>
                     <img src={stillthinking} alt="stillthinking" className="still-img" />
                     <div className="d-flex flex-row justify-content-center align-items-center position-absolute w-100 stillthinking" style={{ bottom: '36px' }}>
                         <div className="mr-5">
